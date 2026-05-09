@@ -136,6 +136,28 @@
     .install-actions button{flex:1;padding:10px;border-radius:10px;font-size:13px;cursor:pointer;border:none}
     .btn-install{background:var(--sage);color:#fff}
     .btn-later{background:var(--cream);color:var(--text)}
+
+    /* Modal */
+    .modal-overlay{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.4);z-index:200;align-items:flex-end;justify-content:center}
+    .modal-overlay.show{display:flex}
+    .modal{background:var(--card);border-radius:24px 24px 0 0;width:100%;max-width:500px;max-height:90vh;overflow-y:auto;padding:24px 20px 32px;animation:slideUp .3s ease}
+    @keyframes slideUp{from{transform:translateY(100%)}to{transform:translateY(0)}}
+    .modal-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
+    .modal-header h2{font-size:18px;font-weight:600}
+    .modal-close{width:32px;height:32px;border-radius:50%;background:var(--cream);border:none;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--text-light)}
+    .form-group{margin-bottom:16px}
+    .form-group label{display:block;font-size:13px;font-weight:500;margin-bottom:6px;color:var(--text)}
+    .form-group input,.form-group select{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:12px;font-size:14px;font-family:inherit;outline:none;background:var(--bg)}
+    .form-group input:focus,.form-group select:focus{border-color:var(--sage)}
+    .form-row{display:flex;gap:12px}
+    .form-row .form-group{flex:1}
+    .btn-submit{width:100%;padding:14px;background:var(--sage);color:#fff;border:none;border-radius:14px;font-size:15px;font-weight:500;cursor:pointer;margin-top:8px}
+    .btn-submit:active{opacity:.85}
+    .btn-delete{width:100%;padding:12px;background:transparent;color:var(--rose);border:1px solid var(--rose);border-radius:14px;font-size:13px;cursor:pointer;margin-top:8px}
+
+    /* Toast */
+    .toast{position:fixed;top:20px;left:50%;transform:translateX(-50%);background:var(--sage-dark);color:#fff;padding:10px 24px;border-radius:20px;font-size:13px;z-index:300;opacity:0;transition:opacity .3s;pointer-events:none}
+    .toast.show{opacity:1}
   </style>
 </head>
 <body>
@@ -240,10 +262,12 @@
     </div>
   </div>
 
-  <button class="fab" onclick="alert('添加衣物功能开发中...')">
+  <!-- FAB -->
+  <button class="fab" onclick="openAddModal()">
     <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
   </button>
 
+  <!-- Bottom Nav -->
   <nav class="bottom-nav">
     <button class="nav-btn active" data-page="wardrobe" onclick="switchPage('wardrobe')"><svg viewBox="0 0 24 24"><path d="M12 4 L4 10 L4 20 L10 20 L10 14 L14 14 L14 20 L20 20 L20 10Z"/></svg><span>衣橱</span></button>
     <button class="nav-btn" data-page="outfit" onclick="switchPage('outfit')"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="12" cy="12" r="4"/></svg><span>穿搭</span></button>
@@ -251,6 +275,7 @@
     <button class="nav-btn" data-page="insp" onclick="switchPage('insp')"><svg viewBox="0 0 24 24"><polygon points="12,2 15,9 22,9 16,14 18,22 12,17 6,22 8,14 2,9 9,9"/></svg><span>灵感</span></button>
   </nav>
 
+  <!-- Install Banner -->
   <div class="install-banner" id="install-banner">
     <div class="install-row">
       <div class="install-icon"><svg viewBox="0 0 24 24"><path d="M12 4 L4 10 L4 20 L10 20 L10 14 L14 14 L14 20 L20 20 L20 10Z"/></svg></div>
@@ -261,6 +286,56 @@
       <button class="btn-install" onclick="doInstall()">安装</button>
     </div>
   </div>
+
+  <!-- Add Clothing Modal -->
+  <div class="modal-overlay" id="add-modal">
+    <div class="modal">
+      <div class="modal-header">
+        <h2>添加衣物</h2>
+        <button class="modal-close" onclick="closeAddModal()">✕</button>
+      </div>
+      <div class="form-group">
+        <label>名称</label>
+        <input type="text" id="form-name" placeholder="例如：白衬衫">
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>品类</label>
+          <select id="form-category">
+            <option value="top">上装</option>
+            <option value="bottom">下装</option>
+            <option value="outerwear">外套</option>
+            <option value="dress">连衣裙</option>
+            <option value="shoes">鞋</option>
+            <option value="accessory">配饰</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>季节</label>
+          <select id="form-season">
+            <option value="spring">🌸 春</option>
+            <option value="summer">☀️ 夏</option>
+            <option value="autumn">🍂 秋</option>
+            <option value="winter">❄️ 冬</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>价格（元）</label>
+          <input type="number" id="form-price" placeholder="199">
+        </div>
+        <div class="form-group">
+          <label>穿着次数</label>
+          <input type="number" id="form-wears" placeholder="0" value="0">
+        </div>
+      </div>
+      <button class="btn-submit" onclick="saveClothing()">保存</button>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
 
   <script>
     var STORAGE_KEY='wardrobe_data',RSS_CACHE_KEY='wardrobe_rss_cache';
@@ -291,6 +366,8 @@
     var currentCategory='all',currentSeason='all',currentSort='date';
     var pageTitles={wardrobe:'衣橱',outfit:'穿搭',stats:'统计',insp:'灵感'};
 
+    function showToast(msg){var t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(function(){t.classList.remove('show')},2000)}
+
     function switchPage(page){
       document.querySelectorAll('.page').forEach(function(p){p.classList.remove('active')});
       document.querySelectorAll('.nav-btn').forEach(function(b){b.classList.remove('active')});
@@ -312,6 +389,7 @@
       return icons[cat]||icons.top;
     }
     function getSeasonEmoji(s){var e={spring:'🌸',summer:'☀️',autumn:'🍂',winter:'❄️'};return e[s]||''}
+    var gradients=['g1','g2','g3','g4','g5'];
 
     function renderWardrobe(){
       var grid=document.getElementById('wardrobe-grid');
@@ -321,10 +399,10 @@
       if(currentSort==='frequency')items.sort(function(a,b){return b.wears-a.wears});
       else if(currentSort==='cost')items.sort(function(a,b){return(a.price/Math.max(a.wears,1))-(b.price/Math.max(b.wears,1))});
       else items.sort(function(a,b){return new Date(b.added)-new Date(a.added)});
-      if(items.length===0){grid.innerHTML='<div style="grid-column:1/-1;text-align:center;padding:40px;color:var(--text-light);font-size:13px">暂无衣物</div>';return}
+      if(items.length===0){grid.innerHTML='<div style="grid-column:1/-1;text-align:center;padding:40px;color:var(--text-light);font-size:13px">暂无衣物，点击右下角 + 添加</div>';return}
       grid.innerHTML=items.map(function(c){
         var avg=(c.price/Math.max(c.wears,1)).toFixed(0);
-        return '<div class="clothing-card"><div class="clothing-img '+c.gradient+'"><svg viewBox="0 0 24 24">'+getClothingIcon(c.category)+'</svg><span class="season-tag">'+getSeasonEmoji(c.season)+'</span></div><div class="clothing-info"><div class="clothing-name">'+c.name+'</div><div class="clothing-stats">穿 '+c.wears+' 次 · ¥'+avg+'/次</div></div></div>';
+        return '<div class="clothing-card" onclick="openEditModal('+c.id+')"><div class="clothing-img '+c.gradient+'"><svg viewBox="0 0 24 24">'+getClothingIcon(c.category)+'</svg><span class="season-tag">'+getSeasonEmoji(c.season)+'</span></div><div class="clothing-info"><div class="clothing-name">'+c.name+'</div><div class="clothing-stats">穿 '+c.wears+' 次 · ¥'+avg+'/次</div></div></div>';
       }).join('');
     }
 
@@ -337,9 +415,8 @@
       var list=document.getElementById('outfit-list');
       document.getElementById('outfit-count').textContent='共 '+appData.outfits.length+' 次';
       if(appData.outfits.length===0){list.innerHTML='<div class="loading">暂无穿搭记录</div>';return}
-      var grads=['g1','g2','g3','g4','g5'];
       list.innerHTML=appData.outfits.map(function(o){
-        var g=grads[o.id%5],d=o.date.replace(/-/g,'.'),it=o.items.join(' · '),oc=o.occasion?' · '+o.occasion:'';
+        var g=gradients[o.id%5],d=o.date.replace(/-/g,'.'),it=o.items.join(' · '),oc=o.occasion?' · '+o.occasion:'';
         return '<div class="outfit-card"><div class="outfit-thumb '+g+'"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="12" cy="12" r="4"/></svg></div><div class="outfit-body"><div class="outfit-date">'+d+oc+'</div><div class="outfit-items">'+it+'</div><div class="outfit-cost">¥'+o.cost.toFixed(1)+'</div></div></div>';
       }).join('');
     }
@@ -361,6 +438,54 @@
       cg.innerHTML=Object.keys(counts).map(function(k){return '<div class="cat-card"><div class="num">'+counts[k]+'</div><div class="label">'+k+'</div></div>'}).join('');
     }
 
+    // ===== Add/Edit Clothing Modal =====
+    var editingId=null;
+    function openAddModal(){
+      editingId=null;
+      document.getElementById('form-name').value='';
+      document.getElementById('form-price').value='';
+      document.getElementById('form-wears').value='0';
+      document.getElementById('add-modal').classList.add('show');
+    }
+    function openEditModal(id){
+      var item=appData.clothing.find(function(c){return c.id===id});
+      if(!item)return;
+      editingId=id;
+      document.getElementById('form-name').value=item.name;
+      document.getElementById('form-category').value=item.category;
+      document.getElementById('form-season').value=item.season;
+      document.getElementById('form-price').value=item.price;
+      document.getElementById('form-wears').value=item.wears;
+      document.getElementById('add-modal').classList.add('show');
+    }
+    function closeAddModal(){document.getElementById('add-modal').classList.remove('show')}
+
+    function saveClothing(){
+      var name=document.getElementById('form-name').value.trim();
+      var cat=document.getElementById('form-category').value;
+      var season=document.getElementById('form-season').value;
+      var price=parseInt(document.getElementById('form-price').value)||0;
+      var wears=parseInt(document.getElementById('form-wears').value)||0;
+      if(!name){showToast('请输入名称');return}
+      if(editingId){
+        var item=appData.clothing.find(function(c){return c.id===editingId});
+        if(item){item.name=name;item.category=cat;item.season=season;item.price=price;item.wears=wears}
+        showToast('已更新');
+      }else{
+        var maxId=0;appData.clothing.forEach(function(c){if(c.id>maxId)maxId=c.id});
+        appData.clothing.push({id:maxId+1,name:name,category:cat,season:season,price:price,wears:wears,gradient:gradients[maxId%5],added:new Date().toISOString().split('T')[0]});
+        showToast('已添加');
+      }
+      saveData(appData);
+      closeAddModal();
+      refreshAll();
+    }
+
+    function refreshAll(){updateQuickStats();renderWardrobe();renderOutfits();renderStats()}
+
+    // Close modal on overlay click
+    document.getElementById('add-modal').addEventListener('click',function(e){if(e.target===this)closeAddModal()});
+
     // RSS
     var RSS_PRESETS={
       vogue:{name:'Vogue',url:'https://www.vogue.com/feed',category:'fashion'},
@@ -368,47 +493,66 @@
       hypebeast:{name:'Hypebeast',url:'https://hypebeast.com/fashion/feed',category:'street'},
       refinery29:{name:'Refinery29',url:'https://www.refinery29.com/style/feed.xml',category:'tips'}
     };
-    var CORS_PROXY='https://api.allorigins.win/raw?url=';
+    var CORS_PROXIES=[
+      'https://api.allorigins.win/raw?url=',
+      'https://corsproxy.io/?',
+      'https://api.codetabs.com/v1/proxy?quest='
+    ];
     var allArticles=[];
+
+    var demoArticles=[
+      {title:'2026 春夏流行趋势：柔和色调回归',desc:'从莫兰迪色系到大地色，今年春夏的关键词是"克制"。用基础款打造高级感，少即是多。',date:'2026-05-08',category:'fashion',source:'Vogue',link:'https://www.vogue.com'},
+      {title:'一件白衬衫的 7 种穿法',desc:'衣橱里最百搭的单品，通勤、约会、周末都能穿。关键是搭配不同的下装和配饰。',date:'2026-05-07',category:'tips',source:'Refinery29',link:'https://www.refinery29.com'},
+      {title:'东京街拍：宽松廓形的魅力',desc:'东京街头的年轻人正在用 oversized 外套 + 修身内搭创造新的比例感。',date:'2026-05-06',category:'street',source:'Hypebeast',link:'https://hypebeast.com'},
+      {title:'衣橱断舍离：留下真正会穿的',desc:'统计显示，普通人只穿衣橱里 20% 的衣服。学会放手，才能更清晰地知道自己需要什么。',date:'2026-05-05',category:'tips',source:'ELLE',link:'https://www.elle.com'},
+      {title:'极简穿搭公式：3 件基础款 = 1 周不重样',desc:'白 T + 牛仔裤 + 一双好鞋，再加一件质感外套，就能应对所有场合。',date:'2026-05-04',category:'tips',source:'Vogue',link:'https://www.vogue.com'},
+      {title:'巴黎时装周：自然材质的回归',desc:'亚麻、棉麻混纺、有机棉——设计师们正在用更可持续的方式诠释优雅。',date:'2026-05-03',category:'fashion',source:'ELLE',link:'https://www.elle.com'},
+      {title:'纽约街头：复古运动风回潮',desc:'90 年代的运动夹克、老爹鞋、棒球帽，正在被新一代年轻人重新定义。',date:'2026-05-02',category:'street',source:'Hypebeast',link:'https://hypebeast.com'}
+    ];
 
     function loadRSSCache(){try{var c=localStorage.getItem(RSS_CACHE_KEY);if(c){var d=JSON.parse(c);if(Date.now()-d.timestamp<3600000){allArticles=d.articles;renderArticles(allArticles);return true}}}catch(e){}return false}
     function saveRSSCache(a){try{localStorage.setItem(RSS_CACHE_KEY,JSON.stringify({timestamp:Date.now(),articles:a}))}catch(e){}}
 
-    function fetchRSS(url){
-      return fetch(CORS_PROXY+encodeURIComponent(url)).then(function(r){
-        if(!r.ok)throw new Error('Network error');
-        return r.text();
-      }).then(function(text){
-        var parser=new DOMParser();
-        var xml=parser.parseFromString(text,'text/xml');
-        if(xml.querySelector('parsererror'))throw new Error('XML parse error');
-        var items=xml.querySelectorAll('item');
-        var articles=[];
-        items.forEach(function(item){
-          var title=item.querySelector('title');title=title?title.textContent:'Untitled';
-          var link=item.querySelector('link');link=link?link.textContent:'#';
-          var desc=item.querySelector('description');desc=desc?desc.textContent:'';
-          var pubDate=item.querySelector('pubDate');pubDate=pubDate?pubDate.textContent:'';
-          var media=item.querySelector('media\\:content, enclosure');
-          var image=media?media.getAttribute('url'):'';
-          var cleanDesc=desc.replace(/<[^>]*>/g,'').substring(0,150);
-          var date=pubDate?new Date(pubDate).toLocaleDateString('zh-CN'):'';
-          articles.push({title:title,link:link,desc:cleanDesc,date:date,image:image});
-        });
-        return articles;
-      }).catch(function(e){console.error('RSS error:',e);return[]});
+    function fetchRSSWithProxy(url){
+      // Try each proxy in sequence
+      function tryProxy(idx){
+        if(idx>=CORS_PROXIES.length)return Promise.reject(new Error('All proxies failed'));
+        return fetch(CORS_PROXIES[idx]+encodeURIComponent(url),{signal:AbortSignal.timeout(8000)}).then(function(r){
+          if(!r.ok)throw new Error('Network error');
+          return r.text();
+        }).then(function(text){
+          var parser=new DOMParser();
+          var xml=parser.parseFromString(text,'text/xml');
+          if(xml.querySelector('parsererror'))throw new Error('XML parse error');
+          var items=xml.querySelectorAll('item');
+          var articles=[];
+          items.forEach(function(item){
+            var title=item.querySelector('title');title=title?title.textContent:'Untitled';
+            var link=item.querySelector('link');link=link?link.textContent:'#';
+            var desc=item.querySelector('description');desc=desc?desc.textContent:'';
+            var pubDate=item.querySelector('pubDate');pubDate=pubDate?pubDate.textContent:'';
+            var media=item.querySelector('media\\:content, enclosure');
+            var image=media?media.getAttribute('url'):'';
+            var cleanDesc=desc.replace(/<[^>]*>/g,'').substring(0,150);
+            var date=pubDate?new Date(pubDate).toLocaleDateString('zh-CN'):'';
+            articles.push({title:title,link:link,desc:cleanDesc,date:date,image:image});
+          });
+          return articles;
+        }).catch(function(e){return tryProxy(idx+1)});
+      }
+      return tryProxy(0);
     }
 
     function renderArticles(articles){
       var feed=document.getElementById('insp-feed');
       if(articles.length===0){
-        feed.innerHTML='<div class="error-state"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg><p>无法加载内容，请检查网络或 RSS 链接</p><button class="retry-btn" onclick="loadPreset(\'all\')">重新加载</button></div>';
+        feed.innerHTML='<div class="error-state"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg><p>无法加载内容</p><button class="retry-btn" onclick="loadPreset(\'all\')">重新加载</button></div>';
         return;
       }
-      var grads=['g1','g2','g3','g4','g5'],heights=['wide','tall','square'];
+      var heights=['wide','tall','square'];
       feed.innerHTML=articles.map(function(a,i){
         var imgHtml=a.image?'<img src="'+a.image+'" style="width:100%;height:100%;object-fit:cover;" onerror="this.outerHTML=\'<svg class=\\\'cover-icon\\\' viewBox=\\\'0 0 40 40\\\'><path d=\\\'M20 4 L36 14 L36 30 L20 36 L4 30 L4 14Z\\\'/><circle cx=\\\'20\\\' cy=\\\'20\\\' r=\\\'6\\\'/></svg>\'">':'<svg class="cover-icon" viewBox="0 0 40 40"><path d="M20 4 L36 14 L36 30 L20 36 L4 30 L4 14Z"/><circle cx="20" cy="20" r="6"/></svg>';
-        return '<div class="insp-card" onclick="window.open(\''+a.link+'\',\'_blank\')"><div class="cover '+heights[i%3]+' '+grads[i%5]+'">'+imgHtml+'<div class="cover-plant"><svg viewBox="0 0 40 40"><path d="M20 36 Q20 28 20 20"/><path d="M20 28 Q14 24 10 20"/><path d="M20 24 Q26 20 30 16"/><circle cx="10" cy="20" r="3"/><circle cx="30" cy="16" r="3"/></svg></div></div><div class="body"><div class="title">'+a.title+'</div><div class="desc">'+a.desc+'</div><div class="meta"><span class="source">'+(a.source||'RSS')+'</span><div class="likes"><svg viewBox="0 0 24 24"><path d="M12 21C12 21 3 13.5 3 8.5C3 5.42 5.42 3 8.5 3C10.24 3 11.91 3.81 12 5C12.09 3.81 13.76 3 15.5 3C18.58 3 21 5.42 21 8.5C21 13.5 12 21 12 21Z"/></svg> '+Math.floor(Math.random()*200+20)+'</div></div></div></div>';
+        return '<div class="insp-card" onclick="window.open(\''+a.link+'\',\'_blank\')"><div class="cover '+heights[i%3]+' '+gradients[i%5]+'">'+imgHtml+'<div class="cover-plant"><svg viewBox="0 0 40 40"><path d="M20 36 Q20 28 20 20"/><path d="M20 28 Q14 24 10 20"/><path d="M20 24 Q26 20 30 16"/><circle cx="10" cy="20" r="3"/><circle cx="30" cy="16" r="3"/></svg></div></div><div class="body"><div class="title">'+a.title+'</div><div class="desc">'+a.desc+'</div><div class="meta"><span class="source">'+(a.source||'RSS')+'</span><div class="likes"><svg viewBox="0 0 24 24"><path d="M12 21C12 21 3 13.5 3 8.5C3 5.42 5.42 3 8.5 3C10.24 3 11.91 3.81 12 5C12.09 3.81 13.76 3 15.5 3C18.58 3 21 5.42 21 8.5C21 13.5 12 21 12 21Z"/></svg> '+Math.floor(Math.random()*200+20)+'</div></div></div></div>';
       }).join('');
     }
 
@@ -419,14 +563,23 @@
       var sources=key==='all'?Object.values(RSS_PRESETS):[RSS_PRESETS[key]];
       allArticles=[];
       var promises=sources.map(function(src){
-        return fetchRSS(src.url).then(function(articles){
+        return fetchRSSWithProxy(src.url).then(function(articles){
           return articles.map(function(a){return{title:a.title,link:a.link,desc:a.desc,date:a.date,image:a.image,category:src.category,source:src.name}});
         });
       });
       Promise.all(promises).then(function(results){
         results.forEach(function(arts){allArticles=allArticles.concat(arts)});
+        if(allArticles.length===0){
+          // Fallback to demo data
+          allArticles=demoArticles.slice();
+          showToast('RSS 加载失败，已加载演示内容');
+        }
         allArticles.sort(function(a,b){return new Date(b.date)-new Date(a.date)});
         saveRSSCache(allArticles);
+        renderArticles(allArticles);
+      }).catch(function(){
+        allArticles=demoArticles.slice();
+        showToast('网络不可用，已加载演示内容');
         renderArticles(allArticles);
       });
     }
@@ -445,8 +598,13 @@
     function loadRSS(url,cat,name){
       var feed=document.getElementById('insp-feed');
       feed.innerHTML='<div class="loading"><div class="loading-spinner"></div><div>正在加载 '+name+'...</div></div>';
-      fetchRSS(url).then(function(articles){
+      fetchRSSWithProxy(url).then(function(articles){
         allArticles=articles.map(function(a){return{title:a.title,link:a.link,desc:a.desc,date:a.date,image:a.image,category:cat,source:name}});
+        if(allArticles.length===0){allArticles=demoArticles.slice();showToast('加载失败，显示演示内容')}
+        renderArticles(allArticles);
+      }).catch(function(){
+        allArticles=demoArticles.slice();
+        showToast('网络不可用，已加载演示内容');
         renderArticles(allArticles);
       });
     }
@@ -472,16 +630,11 @@
     });
 
     // Init
-    updateQuickStats();
-    renderWardrobe();
-    renderOutfits();
-    renderStats();
+    refreshAll();
   </script>
 
   <script>
-    if('serviceWorker'in navigator){
-      navigator.serviceWorker.register('./sw.js').catch(function(){});
-    }
+    if('serviceWorker'in navigator){navigator.serviceWorker.register('./sw.js').catch(function(){})}
   </script>
 </body>
 </html>
