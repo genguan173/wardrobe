@@ -4,515 +4,483 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>wear 穿</title>
+  <meta name="theme-color" content="#B5C4B1">
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="theme-color" content="#6C5CE7">
-  <link rel="manifest" href="data:application/json;base64,eyJuYW1lIjoi5ou/6ZOB6KGj5qmxIiwic2hvcnRfbmFtZSI6IuaLv+mTgeiho+apsSIsImRlc2NyaXB0aW9uIjoi5L2g55qE5pm66IO955S15a2Q6KGj5qmxIiwic3RhcnRfdXJsIjoiLi9pbmRleC5odG1sIiwiZGlzcGxheSI6InN0YW5kYWxvbmUiLCJiYWNrZ3JvdW5kX2NvbG9yIjoiI2Y4ZjlmYSIsInRoZW1lX2NvbG9yIjoiIzZDNUNFNyIsIm9yaWVudGF0aW9uIjoicG9ydHJhaXQiLCJpY29ucyI6W3sic3JjIjoiZGF0YTppbWFnZS9wbmc7YmFzZTY0LGlWQk9SdzBLR2dvQUFBQU5TVWhFVWdBQUFNQUFBQURBQ0FJQUFBRGR2dnRRQUFBRTkwbEVRVlI0bk8zUzJWSWJNUlJGVWYwZzgyaWJJU09Fa0YvR3hoakRaeVFQVkZGT3U4RnEzVzRmWFduZldtOXBVcUN6dzUrTFZ5QlprUDhHY0kyQVlFSkFNQ0VnbUlUN2kxY2dHUUhCSk54UFhvRmtCQVFUQW9KSnVKKzhBTWtJQ0NZRUJCTUNnZ2tCd1NUOG5yd0F5UWdJSmdRRUV3S0NDUUhCSlB3ZXZ3REpDQWdtQkFRVEFvSUpBY0VrM0kxZmdHUUVCQk1DZ2drQndTVGNqWmRZOVhmVHlYL0RyQkJRRXdGMVFrQk5CTlFKQVRVUlVDZmhiclRFcXMwQnFYL0RySVJmb3lWV2JReEkvaHRtaFlDYUNLZ1RBbW9pb0U0SXFJbUFPaUdnSmdMcXBKYUE0bXRJQ0tqbTFBZ285a3NDYWtWQXNWOFNVQ3NDaXYyU2dGb1JVT3lYQk5RcTNJNldOZmhvNC9ndkUzNUUvbGR2UWJnOVg5Ymd3NDJqdjB6NEVmbGZ2UVVFRlBzbEFiVWlvTmd2Q2FnVkFjVitTVUN0d3UzNWN3MCszdml6ZjQySWFmTi9YcmJhQXhyMDVILzFGaEFRQVprUUVBR1poSnZ6NTdKSjBsazkrUXNNcXVTQTFPWDhkL0xYR0VpeEFhbURhVG41bXd5aHdJRFVuV3c0K2Z2MHE3U0ExSGxFbmZ5VmVoUnV6cDdMb0s2aTg4bGZyQmVGQktTT0lmSGs3MlpYUWtEcURFd25mNzNhQTFJSDBNUEozN0RlZ05UVDkzYnlsMHdQNk9mWnMxUHEwWHMrK1h1bThScVFldTVCVHY2cXRRU2tIbnJBazc5dCtRR3BKeDc4NUM5Y2NrRHFjYmQwOG5mdUZORENFZld5V3pyNU84ZnpGSkI2MXEyZS9MVkxDMGc5cU9Ea2J4NFgwT25DQmZXYWdwTy9lUXdmQWFtbmxKMzg1VGNIOU9OMGtUbjFpT0tUdi8vbkNDajNrNysvNzREVTgyVng4aFVJeVBmSlYvQWFrSHE0akU2K0JRSDVQdmtXQk9UNzVGdjRDMGc5V1hZblg0U0FmSjk4a2ZhQXZwOHU4cVRlSzd1VEw5SXEwNERVWTJWNjhsM2FBanBaWkVpOVZLWW4zMlVkQVhrNitTNEU1UHZrdTdRRzlKUWI5VXhabjN5ZEJnSnlkdkoxQ01qM3lkY2hJTjhuWDRlQWZKOThuV1pBMzA2ZWNxUGVLT3VUcjlOQVFNNU92ZzRCK1Q3NU9nVGsrK1RyRUpEdms2K3pGdER4VTI3VUcyVjk4blVhQ01qWnlkY2hJTjhuWDRlQWZKOThuV1pBWDQrZmNxUGVLT3VUcjlOQVFNNU92ZzRCK1Q3NU9nVGsrK1RyRUpEdms2K3pIdEE4UStxWk1qMzVMdXNJeU5QSmR5RWczeWZmcFMyZ28zbUcxRXRsZXZKZDFtVWFFQTJ0bjN5UjlvQytITTN6cE40cnU1TXYwb3FBM0p4OEVXY0IwZERxeWJjZ0lOOG4zNEtBZko5OEM1Y0IwZERieVZjZ0lOOG5YOEZ4UURRa2YzOEM4bjN5OTNjZlVNME55VjkrYzBEWFIzTVgxRk1LVHY3bU1jTDE0ZHdGOVpxQ2s3OTVERGNCMWRhUS9MVUxES2llaHVUdjNDbWdSMGZVeTI3cDVPOGN6MWxBTlRRa2YrSENBeXE3SWZuYlZoRlFxUTNKWDdXaWdNcHJTUDZlaVFGZEhUNzZwUjY5dDVPL1pETGZBWlhSa1B3TnF3N0llMFB5MXlNZ3h3M0ozODJ1a0lBOE5pUi9zVjZFcTRQSGtxaXJpRHI1Sy9Xb3RJRHliMGorUHYwcU1LQTM2azVhVHY0bVF5ZzJvTndha3IvR1FFb082STI2bkdMVGVSTXVEeDVySUVsSC9sZHZRUzBCdmFPYmZsVVgwRHU2NlVXOUFhMGltbVFFQkpOd2VUQURraEVRVEFnSUp1Rnlmd1lrQ3hmN015QVpBY0dFZ0dCQ1FEQWhJSmdRRUV3SUNDWUVCQk1DZ2drQndTUk05bWRBTWdLQ1NaanN6WUJrQkFRVEFvSkptT3hOZ1dRRUJCTUNnZ2tCd1lTQVlCTEdlMU1nR1FIQmhJQmdRa0F3Q2VQZEtaQ01nR0JDUURBaElKZ1FFRXpDYUhjS0pDTWdtQkFRVEFnSUpnUUVrekRhZlFDU0VSQk1DQWdtWWJUekFDUWpJSmlFODUwSElCa0J3WVNBWUVKQU1Qa0h5RVJPWUVRdHMvY0FBQUFBU1VWT1JLNUNZSUk9Iiwic2l6ZXMiOiIxOTJ4MTkyIiwidHlwZSI6ImltYWdlL3BuZyIsInB1cnBvc2UiOiJhbnkgbWFza2FibGUifSx7InNyYyI6ImRhdGE6aW1hZ2UvcG5nO2Jhc2U2NCxpVkJPUncwS0dnb0FBQUFOU1VoRVVnQUFBZ0FBQUFJQUNBSUFBQUI3R2tPdEFBQVJOMGxFUVZSNG5PM1YyM1ljUlpaRjBmeEI3Z1o4d2RCQUF3M21sL0hkNWpQb0Iya0lXeXBKV1ZXWnNTUGl6RFhtYzdkdzVZbTkvUG5kM3dBVXRNVC9BZ0FpREFCQVVRWUFvQ2dEQUZDVUFRQW95Z0FBRkdVQUFJb3lBQUJGR1FDQW9nd0FRRkVHQUtBb0F3QlExUExzdTc4QktNZ0FBQlJsQUFDS01nQUFSUmtBZ0tLV1owLytCcUFnQXdCUWxBRUFLTW9BQUJSbEFBQ0tNZ0FBUlJrQWdLSU1BRUJSeTdNbjd3RW95QUFBRkdVQUFJb3lBQUJGR1FDQW9nd0FRRkVHQUtBb0F3QlFsQUVBS01vQUFCUmxBQUNLTWdBQVJSa0FnS0tXUDU2OEI2QWdBd0JRbEFFQUtNb0FBQlJsQUFDS01nQUFSUmtBZ0tJTUFFQlJCZ0NnS0FNQVVKUUJBQ2pLQUFBVVpRQUFpbHIrZVB3ZWdJSU1BRUJSQmdDZ0tBTUFVSlFCQUNqS0FBQVVaUUFBaWpJQUFFVVpBSUNpREFCQVVRWUFvQ2dEQUZDVUFRQW9hdm45OFhzQUNqSUFBRVVaQUlDaURBQkFVUVlBb0NnREFGQ1VBUUFveWdBQUZHVUFBSW95QUFCRkdRQ0FvZ3dBUUZITDc0L2Z3VXorMmJQNGZ4MXN5QUF3R3dNQUt4a0FabU1BWUNVRHdHd01BS3hrQUppTkFZQ1ZEQUN6TVFDd2tnRmdOZ1lBVmpJQXpNWUF3RW9HZ05rWUFGaHArZjNSTzVqSnZnT1EvcStERFJrQVptTUFZQ1VEd0d3TUFLeGtBSmlOQVlDVmx2ODllZ2N6MlhVQTR2OTFzQ0VEd0d3TUFLeGtBSmlOQVlDVkRBQ3pNUUN3a2dGZ05nWUFWaklBek1ZQXdFb0dnTmtZQUZqSkFEQWJBd0FyR1FCbVl3QmdKUVBBYkF3QXJHUUFtSTBCZ0pVTUFMTXhBTENTQVdBMkJnQldNZ0MwMFBMWjNlaXB6LzhsOFYrTjZSa0FXaGpvMmUzbkw0bi9ha3pQQU5EQ1FNOXVQMzlKL0ZkamVnYUFGZ1o2ZHZ2NVMrSy9HdE16QUxRdzBMUGJ6MThTLzlXWW5nR2doWUdlM1g3K2t2aXZ4dlFNQUMwTTlPejI4NWZFZnpXbVp3Qm9ZYUJudDUrL0pQNnJNVDBEUUFzRFBidjkvQ1h4WDQzcEdRQmFHT2paN2VjdmlmOXFUTThBME1KQXoyNC9mMG44VjJONkJvQVdCbnAyKy9sTDRyOGEwek1BdEREUXM5dlBYeEwvMVpqZTh0dWpkN0MzTTUvQ2x2OWYvZndsOFYrTjZSa0FXaGpvMmUzbkw0bi9ha3pQQU5EQ1FNOXVQMzlKL0ZkamVnYUFGZ1o2ZHZ2NVMrSy9HdE5iZm52NER2WjI3bFBZOFArcm43OGsvcXN4UFFOQUN3TTl1LzM4SmZGZmpla1pBRm9ZNk5udDV5K0ovMnBNendEUXdrRFBiajkvU2Z4WFkzb0dnQllHZW5iNytVdml2eHJUTXdDME1OQ3oyODlmRXYvVm1KNEJvSVdCbnQxKy9wTDRyOGIwREFBdERQVHM5dk9YeEg4MXBtY0FhR0dnWjdlZnZ5VCtxekc5NWJlSGIyRnZaeitGN2Y2Lyt2bEw0cjhhMHpNQXRMRFRVM2ptLyt4V05mNnZocTBZQUZyWTZpazg4MytuVFp2L1Y4Tk9EQUF0YlBTMDFpcitxekU5QTBBTDZiZDB5T0svR3RNekFMU1Fma3VITFA2ck1UMERRQXZwdDNUSTRyOGEwek1BdEpCK1M0Y3MvcXN4UFFOQUMrbTNkTWppdnhyVE13QzBrSDVMaHl6K3F6RTlBMEFMNmJkMHlPSy9HdE16QU93by9ZUk9VdngzWkZiTHJ3L2Z3dWJTYithRXhYOVQ1bU1BMkZqNm5aeTgrTy9MVEF3QW0wbS9qWVdLLzliTXdRQ3dqZlNUV0s3NEw4NEVEQURuU3IrRXBZdi8rZ3pOQUhDNjlPdW55K0pmQW9NeUFKd2kvZUxwUVBHdmd1RVlBSTZXZnVoMGEvRnZnN0VZQUk2UWZ0KzBxdmgzd2lnTUFHdWxuelVkVWZ4cllRZ0dnUHVsWHpPZFdQekxvWE1HZ0h1a0h6R2RWZno3b1djR2dMdWtueTl0VVB3cm9sdkxyOSsraFp2U3I1WTJMdjVGMFNFRHdBSHB4MHE3RlArdTZJMEI0THIwTTZVZGkzOWRkTVVBOEsvMDY2Ukd4YjgwT21FQXVKUitsTlMwK1BkR0R3d0FiNzMrTll0L2RjUVpBTHorZFl0L2UyUVpnT3JTVDVEQ3hiOUFnZ3hBYWVuSFIxMFUvdzVKTVFCMXBaOGRkVlQ4YXlUQ0FCU1ZmbkRVWGZGdmt2WU1RRG5wZDBaZEYvOCthY2tBMUpKK1hqUkE4YStVWnBaZnZuMUxIZW0zUlFNVS8wcHB4Z0FVa241WU5FenhiNVUyREVBVjZTZEZneFgvWW1uQUFKU1Fma3cwWlBIdmxyMFpnUG1sbnhFTlhQenJaVmNHWUhMcEIwVERGLytHMlk4Qm1GbjY2ZEFreGI5a2RtSUFwcFYrTkRSVjhlK1pQUmlBT2FXZkMwMVkvS3RtY3daZ1R1bTNRaE1XLzZyWm5BR1lVUHFoMExURnYyMjJaUUJtazM0aU5IbnhMNXdOR1lDcHBCOEhsU2orbmJPVjVaZHYzekNOOU11Z0VzVy9jN1ppQU9hUmZoWlVxUGpYemlZTXdDVFNENExLRmYvbU9aOEJtRUg2S1ZEUjRsOCtaeklBTTBpL0F5cGEvTXZuVEFaZ2VPbEhRS1dMZi8rY3d3Q01MWDMra2cwWW1BRVlXL3IySlFNd3NPV1hiOTR3cVBUaFM1ZkZiNEhUR0lCUnBVOWUrcWo0UlhBQ0F6Q3E5TDFMSHhXL0NFNWdBSWFVUG5icFFQRzc0RmdHWUVqcFM1Y09GTDhManJYODk1czNqQ1Y5NXRLdHhhK0RveGlBOGFSdlhMcTErSFZ3RkFNd21QU0JTL2NVdnhIV013QWpTWisydEtyNHBiQ1NBUmhKK3E2bFZjVXZoWlVNd0REU1J5MGRVZnhlV01NQURDTjkwZElSeGUrRk5RekFHTkxuTEIxZC9HcTRsd0VZUS9xV3BhT0xYdzMzTWdBRFNCK3lkR0x4MitGdUJtQUE2U3VXVGl4K085ek5BQXdnZmNYU2ljVnZoN3NaZ042bFQxZzZxL2dGY1FjRDBMdjAvVXBuRmI4ZzdtQUF1cFkrWG1tRDRuZkViUXhBMTlLWEsyMVEvSTY0alFIb1YvcHNwYzJLWHhNSEdZQitwVzlXMnF6NE5YR1FBZWhYK21hbHpZcGZFd2NaZ0U2bEQxYmF1UGhOY1pNQjZGVDZXcVdOaTk4VU54bUFUcVd2VmRxNCtFMXhrd0hvVWZwVXBWMktYeGJYR0lBZXBlOVUycVg0WlhHTkFlaFIrazZsWFlwZkZ0Y3NQMy96aHE2a2oxVGFzZmg5OFNFRDBKMzBoVW83RnI4dlBtUUF1cE8rVUduSDR2ZkZod3hBWDlMbktlMWUvTXE0c3Z6ODlSdjZrYjVOYWZmaVY4WVZBOUNYOUcxS3V4ZS9NcTRZZ0w2a2IxUGF2ZmlWY2NVQWRDUjltRktqNHJmR0JRUFFrZlJWU28ySzN4b1hERUJIMGxjcE5TcCthMXd3QUIxSlg2WFVxUGl0Y2NFQTlDSjlrbExUNGhlSEFlaEkraDZscHNVdmpvc0JlRTBQMHZjb05TMStjZno4OVdzRDBJdjBQVXBOaTE4Y0JxQWo2WHVVbWhhL09BeEFMOUxIS0FXSzN4MEdvQXZwUzVRQ3hlOE9BOUNGOUNWS2dlSjNod0hvUXZvU3BVRHh1OE1BZENGOWlWS2crTjFoQUxxUXZrUXBVUHp1TUFCZFNGK2lGQ2grZHhpQXZQUVpTckhpMTFlY0FjaEwzNkFVSzM1OXhSbUF2UFFOU3JIaTExZmM4dFBYcjhsSzM2QVVLMzU5eFJtQXZQUU5TckhpMTFlY0FjaEwzNkFVSzM1OXhSbUF2UFFOU3JIaTExZWNBY2hMMzZBVUszNTl4Um1BdlBRTlNySGkxMWVjQWNoTDM2QVVLMzU5eFJtQXZQUU5TckhpMTFlY0FjaEwzNkFVSzM1OXhSbUF2UFFOU3JIaTExZWNBY2hMMzZBVUszNTl4Um1BdlBRTlNySGkxMWVjQWNoTDM2QVVLMzU5eFMwL1BYaE5Wdm9HcFZqeDZ5dk9BT1NsYjFDS0ZiKys0Z3hBWHZvR3BWang2eXZPQU9TbGIxQ0tGYisrNGd4QVh2b0dwVmp4Nnl2T0FPU2xiMUNLRmIrKzRneEFYdm9HcFZqeDZ5dk9BT1NsYjFDS0ZiKys0Z3hBWHZvR3BWang2eXZPQU9TbGIxQ0tGYisrNGd4QVh2b0dwVmp4Nnl2T0FPU2xiMUNLRmIrKzRwWWZIN3dtSzMyRFVxejQ5UlZuQVBMU055akZpbDlmY1FZZ0wzMkRVcXo0OVJWbkFMcVFQa01wVVB6dU1BQmRTRitpRkNoK2R4aUFMcVF2VVFvVXZ6c01RQmZTbHlnRml0OGRCcUFMNlV1VUFzWHZEZ1BRaGZRbFNvSGlkNGNCNkVMNkVxVkE4YnZEQVBRaWZZeFMwK0lYaHdIb1NQb2VwYWJGTHc0RDBKSDBQVXBOaTE4Y0Z3UHdpaDZrNzFGcVd2emkrUEhCS3dQUWkvUTlTazJMWHh3R29DL3BrNVFhRmI4MUxoaUFqcVN2VW1wVS9OYTRZQUE2a3I1S3FWSHhXK09DQWVoSStpcWxSc1Z2alFzR29DL3B3NVIyTDM1bFhERUFmVW5mcHJSNzhTdmppZ0hvUy9vMnBkMkxYeGxYbGgrL2VrVS8wcmNwN1Y3OHlyaGlBTHFUUGs5cHgrTDN4WWNNUUhmU0Z5cnRXUHkrK0pBQjZFNzZRcVVkaTk4WEgxcis4OVVyZXBNK1VtbVg0cGZGTlFhZ1IrazdsWFlwZmxsY1l3QjZsTDVUYVpmaWw4VTFCcUJUNlZPVk5pNStVOXhrQURxVnZsWnA0K0kzeFUwR29GUHBhNVUyTG41VDNHUUErcFUrV0dtejR0ZkVRUWFnWCttYmxUWXJmazBjWkFENmxiNVphYlBpMThSQkJxQnI2Yk9WTmloK1I5ekdBSFF0ZmJuU0JzWHZpTnNZZ042bGoxYzZxL2dGY1FjRDBMdjAvVXBuRmI4ZzdtQUFCcEErWWVuRTRyZkQzUXpBQU5KWExKMVkvSGE0bXdFWVFQcUtwUk9MM3c1M013QmpTQit5ZEhUeHErRmVCbUFNNlZ1V2ppNStOZHpMQUF3amZjN1NFY1h2aFRVTXdERFNGeTBkVWZ4ZVdNTUFqQ1I5MU5LcTRwZkNTZ1pnSk9tN2xsWVZ2eFJXTWdDRFNaKzJkRS94RzJFOUF6Q2U5SUZMdHhhL0RvNWlBTWFUdm5IcDF1TFh3VkVNd0pEU1p5NGRLSDRYSEd2NTRhdFhEQ2Q5NmRLQjRuZkJzUXpBcU5MSExuMVUvQ0k0Z1FFWVZmcmVwWStLWHdRbk1BQURTNSs4ZEZuOEZqak44c09YcnhoWCt2Q2xmK0pYd01rTXdOalN0eThaZ0lFWmdPR2x6MStsaTMvL25NTUF6Q0Q5Q0tobzhTK2ZNeG1BR2FUZkFSVXQvdVZ6SmdNd2lmUlRvSExGdjNuT1p3RG1rWDRRVktqNDE4NG1ETUJVMHMrQ1NoVC96dG5LOHNPWEw1bEcrbVZRaWVMZk9Wc3hBTE5KUHc2YXZQZ1h6b1lNd0lUU1Q0U21MZjV0c3kwRE1LZjBRNkVKaTMvVmJNNEF6Q245Vm1qQzRsODFtek1BMDBvL0Y1cXErUGZNSGd6QXpOS1BoaVlwL2lXekV3TXd1ZlRUb2VHTGY4UHN4d0RNTC8yQWFPRGlYeSs3TWdBbHBKOFJEVm44dTJWdkJxQ0s5R09pd1lwL3NUUmdBQXBKUHlrYXB2aTNTaHNHb0piMHc2SUJpbitsTkxOOC8rVkw2a2kvTFJxZytGZEtNd2FnblBUem9xNkxmNSswWkFDS1NyOHo2cTc0TjBsN0JxQ3U5SU9qam9wL2pVUVlnTkxTejQ2NktQNGRrbUlBcWtzL1Bnb1gvd0lKTWdEWWdMckZ2ejJ5REFBdmJVRE40bDhkY1FhQVMrbm5TRTJMZjIvMHdBRHdyL1NqcEViRnZ6UTZZUUM0THYwNmFjZmlYeGRkTVFBY2tINm10RXZ4NzRyZUdBQU9TejlXMnJqNEYwV0hsdSsvZUFtM1NiOWEycUQ0VjBTM0RBRDNTRDlmT3F2NDkwUFBEQUQzU3o5aU9ySDRsMFBuREFCcnBWOHpIVkg4YTJFSUJvQWpwSjgxclNyK25UQUtBOERSMHUrYmJpMytiVEFXQThBcDBnK2REaFQvS2hpT0FlQjA2UmRQbDhXL0JBWmxBRGhYK3ZVclhmelhaMmdHZ0cya1g4Snl4WDl4Sm1BQTJFejZTU3hVL0xkbURnYUFqYVhmeHNtTC83N014QUN3aS9RN09XSHgzNVQ1TEUrL2VBazdTYitaa3hUL0habVZBYUNGOUJNNlpQRmZqZWtaQU5wSnY2akRGUCtsS01JQTBGcjZkZTI2K0s5REtRYUFtUFJqMjFIeDM0S2FEQUI1NmVjM1Z2eGZudUlNQUIxSlA4aU5pdjg3d3dVRFFJL1NUL1F1eGY5VjRSb0RRTy9TNy9aWnhmLzE0QTRHZ0pHazMvTlZ4ZitWWUNVRHdNRFNULzFsOFg4SE9JMEJZRGJlZWxqSkFBQVV0VHo5NGdVQUJSa0FnS0lNQUVCUkJnQ2dLQU1BVUpRQkFDaktBQUFVWlFBQWlscWVmdjRDZ0lJTUFFQlJCZ0NnS0FNQVVOVHkzZWN2QUNqSUFBQVVaUUFBaWpJQUFFVVpBSUNpREFCQVVRWUFvQ2dEQUZDVUFRQW95Z0FBRkdVQUFJb3lBQUJGR1FDQW9nd0FRRkVHQUtBb0F3QlFsQUVBS01vQUFCUmxBQUNLTWdBQVJSa0FnS0lNQUVCUkJnQ2dLQU1BVUpRQkFDaktBQUFVdFR6NS9BVUFCUmtBZ0tJTUFFQlJCZ0NncU9YSlp5OEFLTWdBQUJSbEFBQ0tNZ0FBUlJrQWdLSU1BRUJSQmdDZ0tBTUFVSlFCQUNocWVmTFpjd0FLTWdBQVJSa0FnS0lNQUVCUkJnQ2dLQU1BVUpRQkFDaktBQUFVWlFBQWlqSUFBRVVaQUlDaURBQkFVUVlBb0tqbDhXZlBBU2pJQUFBVVpRQUFpaklBQUVVWkFJQ2lEQUJBVVFZQW9DZ0RBRkNVQVFBb3lnQUFGR1VBQUlveUFBQkZMWTgvZlE1QVFRWUFvQ2dEQUZDVUFRQW95Z0FBRkdVQUFJb3lBQUJGR1FDQW9nd0FRRkVHQUtBb0F3QlFsQUVBS01vQUFCUzFQUHIwT1FBRkdRQ0FvZ3dBUUZFR0FLQW9Bd0JRbEFFQUtNb0FBQlJsQUFDS01nQUFSUmtBZ0tJTUFFQlJCZ0NnS0FNQVVOVHk2Tk8vQUNqSUFBQVVaUUFBaWpJQUFFVVpBSUNpREFCQVVRWUFvQ2dEQUZEVTh1aVR2d0FveUFBQUZHVUFBSW95QUFCRkdRQ0FvcGFIbi93RlFFRUdBS0FvQXdCUWxBRUFLTW9BQUJSbEFBQ0tNZ0FBUlJrQWdLSU1BRUJSQmdDZ0tBTUFVSlFCQUNqcS81OE4vZ3BWcFdnbEFBQUFBRWxGVGtTdVFtQ0MiLCJzaXplcyI6IjUxMng1MTIiLCJ0eXBlIjoiaW1hZ2UvcG5nIiwicHVycG9zZSI6ImFueSBtYXNrYWJsZSJ9XX0=">
-  <link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAIAAADdvvtQAAAE90lEQVR4nO3S2VIbMRRFUf0g82ibISOEkF/GxhjDZyQPVFFOu8Fq3W4fXWnfWm9pUqCzw5+LVyBZkP8GcI2AYEJAMCEgmIT7i1cgGQHBJNxPXoFkBAQTAoJJuJ+8AMkICCYEBBMCggkBwST8nrwAyQgIJgQEEwKCCQHBJPwevwDJCAgmBAQTAoIJAcEk3I1fgGQEBBMCggkBwSTcjZdY9XfTyX/DrBBQEwF1QkBNBNQJATURUCfhbrTEqs0BqX/DrIRfoyVWbQxI/htmhYCaCKgTAmoioE4IqImAOiGgJgLqpJaA4mtICKjm1Ago9ksCakVAsV8SUCsCiv2SgFoRUOyXBNQq3I6WNfho4/gvE35E/ldvQbg9X9bgw42jv0z4EflfvQUEFPslAbUioNgvCagVAcV+SUCtwu35cw0+3vizf42IafN/XrbaAxr05H/1FhAQAZkQEAGZhJvz57JJ0lk9+QsMquSA1OX8d/LXGEixAamDaTn5mwyhwIDUnWw4+fv0q7SA1HlEnfyVehRuzp7LoK6i88lfrBeFBKSOIfHk72ZXQkDqDEwnf73aA1IH0MPJ37DegNTT93byl0wP6OfZs1Pq0Xs++Xum8RqQeu5BTv6qtQSkHnrAk79t+QGpJx785C9cckDqcbd08nfuFNDCEfWyWzr5O8fzFJB61q2e/LVLC0g9qODkbx4X0OnCBfWagpO/eQwfAamnlJ385TcH9ON0kTn1iOKTv//nCCj3k7+/74DU82Vx8hUIyPfJV/AakHq4jE6+BQH5PvkWBOT75Fv4C0g9WXYnX4SAfJ98kfaAvp8u8qTeK7uTL9Iq04DUY2V68l3aAjpZZEi9VKYn32UdAXk6+S4E5Pvku7QG9JQb9UxZn3ydBgJydvJ1CMj3ydchIN8nX4eAfJ98nWZA306ecqPeKOuTr9NAQM5Ovg4B+T75OgTk++TrEJDvk6+zFtDxU27UG2V98nUaCMjZydchIN8nX4eAfJ98nWZAX4+fcqPeKOuTr9NAQM5Ovg4B+T75OgTk++TrEJDvk6+zHtA8Q+qZMj35LusIyNPJdyEg3yffpS2go3mG1EtlevJd1mUaEA2tn3yR9oC+HM3zpN4ru5Mv0oqA3Jx8EWcB0dDqybcgIN8n34KAfJ98C5cB0dDbyVcgIN8nX8FxQDQkf38C8n3y93cfUM0NyV9+c0DXR3MX1FMKTv7mMcL14dwF9ZqCk795DDcB1daQ/LULDKiehuTv3CmgR0fUy27p5O8cz1lANTQkf+HCAyq7IfnbVhFQqQ3JX7WigMprSP6eiQFdHT76pR69t5O/ZDLfAZXRkPwNqw7Ie0Py1yMgxw3J382ukIA8NiR/sV6Eq4PHkqiriDr5K/WotIDyb0j+Pv0qMKA36k5aTv4mQyg2oNwakr/GQEoO6I26nGLTeRMuDx5rIElH/ldvQS0BvaObflUX0Du66UW9Aa0immQEBJNweTADkhEQTAgIJuFyfwYkCxf7MyAZAcGEgGBCQDAhIJgQEEwICCYEBBMCggkBwSRM9mdAMgKCSZjszYBkBAQTAoJJmOxNgWQEBBMCggkBwYSAYBLGe1MgGQHBhIBgQkAwCePdKZCMgGBCQDAhIJgQEEzCaHcKJCMgmBAQTAgIJgQEkzDafQCSERBMCAgmYbTzACQjIJiE850HIBkBwYSAYEJAMPkHyEROYEQts/cAAAAASUVORK5CYII=">
-  <title>拿铁衣橱 ☕</title>
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="wear 穿">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Ccircle cx='256' cy='256' r='240' fill='%23B5C4B1'/%3E%3Cg stroke='white' fill='none' stroke-width='12' stroke-linecap='round'%3E%3Ccircle cx='256' cy='100' r='32'/%3E%3Cline x1='256' y1='132' x2='256' y2='160'/%3E%3Cline x1='120' y1='160' x2='392' y2='160'/%3E%3Cline x1='120' y1='160' x2='256' y2='260'/%3E%3Cline x1='392' y1='160' x2='256' y2='260'/%3E%3Cline x1='120' y1='160' x2='100' y2='220'/%3E%3Cline x1='392' y1='160' x2='412' y2='220'/%3E%3C/g%3E%3Ctext x='256' y='370' text-anchor='middle' font-family='Arial' font-size='80' font-weight='800' fill='white' letter-spacing='12'%3Ewear%3C/text%3E%3C/svg%3E">
+  <link rel="manifest" href="data:application/json;base64,eyJuYW1lIjoid2VhciDjgIHnlKjkuI0iLCJzaG9ydF9uYW1lIjoid2VhciIsInN0YXJ0X3VybCI6Ii4iLCJkaXNwbGF5Ijoic3RhbmRhbG9uZSIsImJhY2tncm91bmRfY29sb3IiOiIjRkFGQUY4IiwidGhlbWVfY29sb3IiOiIjQjVDNEIxIiwiaWNvbnMiOlt7InNyYyI6ImRhdGE6aW1hZ2Uvc3ZnK3htbCwlM0NzdmcgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyB2aWV3Qm94PScwIDAgNTEyIDUxMiclM0UlM0NjaXJjbGUgY3g9JzI1NicgY3k9JzI1Nicgcj0nMjQwJyBmaWxsPSclMjNCNUM0QjEnLyUzRSUzQ2cgc3Ryb2tlPSd3aGl0ZScgZmlsbD0nbm9uZScgc3Ryb2tlLXdpZHRoPScxMicgc3Ryb2tlLWxpbmVjYXA9J3JvdW5kJyUzRSUzQ2NpcmNsZSBjeD0nMjU2JyBjeT0nMTAwJyByPSczMicvJTNFJTNDbGluZSB4MT0nMjU2JyB5MT0nMTMyJyB4Mj0nMjU2JyB5Mj0nMTYwJy8lM0UlM0NsaW5lIHgxPScxMjAnIHkxPScxNjAnIHgyPSczOTInIHkyPScxNjAnLyUzRSUzQ2xpbmUgeDE9JzEyMCcgeTE9JzE2MCcgeDI9JzI1NicgeTI9JzI2MCcvJTNFJTNDbGluZSB4MT0nMzkyJyB5MT0nMTYwJyB4Mj0nMjU2JyB5Mj0nMjYwJy8lM0UlM0NsaW5lIHgxPScxMjAnIHkxPScxNjAnIHgyPScxMDAnIHkyPScyMjAnLyUzRSUzQ2xpbmUgeDE9JzM5MicgeTE9JzE2MCcgeDI9JzQxMicgeTI9JzIyMCcvJTNFJTNDL2clM0UlM0N0ZXh0IHg9JzI1NicgeT0nMzcwJyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmb250LWZhbWlseT0nQXJpYWwnIGZvbnQtc2l6ZT0nODAnIGZvbnQtd2VpZ2h0PSc4MDAnIGZpbGw9J3doaXRlJyBsZXR0ZXItc3BhY2luZz0nMTInJTNFd2VhciUzQy90ZXh0JTNFJTNDL3N2ZyUzRSIsInNpemVzIjoiNTEyeDUxMiIsInR5cGUiOiJpbWFnZS9zdmcreG1sIn1dfQ==">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    :root {
-      --primary: #6C5CE7; --primary-light: #a29bfe; --bg: #f8f9fa;
-      --card: #ffffff; --text: #2d3436; --text-light: #636e72;
-      --border: #e9ecef; --success: #00b894; --danger: #e17055;
-    }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: var(--bg); color: var(--text); padding-bottom: 80px;
-      -webkit-tap-highlight-color: transparent;
-    }
-    .header {
-      background: var(--primary); color: white; padding: 16px 20px;
-      text-align: center; position: sticky; top: 0; z-index: 100;
-      box-shadow: 0 2px 10px rgba(108,92,231,0.3);
-    }
-    .header h1 { font-size: 20px; font-weight: 600; }
-    .tab { display: none; padding: 16px; } .tab.active { display: block; }
-    .toolbar { margin-bottom: 12px; }
-    .filter-chips {
-      display: flex; gap: 8px; overflow-x: auto; padding: 4px 0;
-      -webkit-overflow-scrolling: touch;
-    }
-    .filter-chips::-webkit-scrollbar { display: none; }
-    .chip {
-      padding: 6px 14px; border-radius: 20px; border: 1.5px solid var(--border);
-      background: var(--card); font-size: 13px; white-space: nowrap;
-      cursor: pointer; transition: all 0.2s;
-    }
-    .chip.active { background: var(--primary); color: white; border-color: var(--primary); }
-    .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
-    .clothes-card {
-      background: var(--card); border-radius: 16px; overflow: hidden;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06); cursor: pointer; transition: transform 0.2s;
-    }
-    .clothes-card:active { transform: scale(0.97); }
-    .clothes-card .img-wrapper {
-      width: 100%; aspect-ratio: 1; background: #f1f2f6;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 48px; overflow: hidden;
-    }
-    .clothes-card .img-wrapper img { width: 100%; height: 100%; object-fit: cover; }
-    .clothes-card .info { padding: 10px 12px; }
-    .clothes-card .info .name {
-      font-size: 14px; font-weight: 600; margin-bottom: 4px;
-      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-    }
-    .clothes-card .info .meta {
-      font-size: 12px; color: var(--text-light); display: flex; justify-content: space-between;
-    }
-    .clothes-card .info .cost { color: var(--success); font-weight: 600; }
-    .section-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
-    .section-header h2 { font-size: 18px; font-weight: 600; }
-    .btn-primary {
-      background: var(--primary); color: white; border: none;
-      padding: 10px 20px; border-radius: 12px; font-size: 14px;
-      font-weight: 600; cursor: pointer;
-    }
-    .btn-primary:active { opacity: 0.8; }
-    .full-width { width: 100%; margin-top: 16px; padding: 14px; }
-    .empty-state { text-align: center; padding: 60px 20px; color: var(--text-light); }
-    .empty-state p:first-child { font-size: 48px; margin-bottom: 12px; }
-    .bottom-nav {
-      position: fixed; bottom: 0; left: 0; right: 0;
-      background: var(--card); display: flex; justify-content: space-around;
-      padding: 8px 0; padding-bottom: max(8px, env(safe-area-inset-bottom));
-      box-shadow: 0 -2px 10px rgba(0,0,0,0.06); z-index: 100;
-    }
-    .nav-btn {
-      display: flex; flex-direction: column; align-items: center; gap: 2px;
-      background: none; border: none; font-size: 10px; color: var(--text-light);
-      cursor: pointer; padding: 4px 12px;
-    }
-    .nav-btn.active { color: var(--primary); }
-    .nav-icon { font-size: 22px; }
-    .fab {
-      position: fixed; bottom: 90px; right: 20px;
-      width: 56px; height: 56px; border-radius: 50%;
-      background: var(--primary); color: white; border: none;
-      font-size: 28px; box-shadow: 0 4px 15px rgba(108,92,231,0.4);
-      cursor: pointer; z-index: 99;
-    }
-    .fab:active { transform: scale(0.9); }
-    .modal {
-      display: none; position: fixed; inset: 0;
-      background: rgba(0,0,0,0.5); z-index: 200;
-      align-items: flex-end; justify-content: center;
-    }
-    .modal.show { display: flex; }
-    .modal-content {
-      background: var(--card); border-radius: 20px 20px 0 0;
-      width: 100%; max-width: 500px; max-height: 90vh;
-      overflow-y: auto; animation: slideUp 0.3s ease;
-    }
-    @keyframes slideUp { from { transform: translateY(100%); } to { transform: translateY(0); } }
-    .modal-header {
-      display: flex; justify-content: space-between; align-items: center;
-      padding: 16px 20px; border-bottom: 1px solid var(--border);
-    }
-    .modal-header h3 { font-size: 18px; }
-    .close-btn { background: none; border: none; font-size: 24px; cursor: pointer; color: var(--text-light); }
-    .modal-body { padding: 20px; }
-    .form-group { margin-bottom: 16px; }
-    .form-group label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 6px; color: var(--text-light); }
-    .form-group input, .form-group select, .form-group textarea {
-      width: 100%; padding: 12px; border: 1.5px solid var(--border);
-      border-radius: 12px; font-size: 15px; background: var(--bg);
-    }
-    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--primary); }
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-    .upload-area {
-      border: 2px dashed var(--border); border-radius: 16px;
-      padding: 30px; text-align: center; color: var(--text-light); cursor: pointer;
-    }
-    .upload-area:active { border-color: var(--primary); }
-    .outfit-items-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; max-height: 200px; overflow-y: auto; }
-    .outfit-item {
-      position: relative; border: 2px solid var(--border); border-radius: 12px;
-      padding: 8px; text-align: center; cursor: pointer; transition: all 0.2s;
-    }
-    .outfit-item.selected { border-color: var(--primary); background: rgba(108,92,231,0.1); }
-    .outfit-item .emoji { font-size: 24px; }
-    .outfit-item .name { font-size: 11px; margin-top: 4px; }
-    .outfit-card {
-      background: var(--card); border-radius: 16px; overflow: hidden;
-      margin-bottom: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    }
-    .outfit-card .outfit-img {
-      width: 100%; aspect-ratio: 4/3; background: #f1f2f6;
-      display: flex; align-items: center; justify-content: center; font-size: 48px;
-    }
-    .outfit-card .outfit-img img { width: 100%; height: 100%; object-fit: cover; }
-    .outfit-card .outfit-info { padding: 12px 16px; }
-    .outfit-card .outfit-info .date { font-size: 12px; color: var(--text-light); margin-bottom: 4px; }
-    .outfit-card .outfit-info .items { font-size: 14px; font-weight: 600; }
-    .inspiration-card {
-      background: var(--card); border-radius: 16px; padding: 16px;
-      margin-bottom: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    }
-    .inspiration-card .tag {
-      display: inline-block; padding: 3px 10px; border-radius: 12px;
-      font-size: 11px; font-weight: 600; margin-bottom: 8px;
-    }
-    .tag.runway { background: #fdcb6e; color: #2d3436; }
-    .tag.trend { background: #74b9ff; color: #2d3436; }
-    .tag.community { background: #a29bfe; color: white; }
-    .inspiration-card h4 { font-size: 16px; margin-bottom: 6px; }
-    .inspiration-card p { font-size: 13px; color: var(--text-light); line-height: 1.5; }
-    .inspiration-card .source { font-size: 11px; color: var(--text-light); margin-top: 8px; }
-    .stat-card {
-      background: var(--card); border-radius: 16px; padding: 20px;
-      margin-bottom: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    }
-    .stat-card .stat-value { font-size: 32px; font-weight: 700; color: var(--primary); }
-    .stat-card .stat-label { font-size: 13px; color: var(--text-light); margin-top: 4px; }
-    .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-    .detail-img {
-      width: 100%; aspect-ratio: 1; background: #f1f2f6; border-radius: 16px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 80px; margin-bottom: 16px; overflow: hidden;
-    }
-    .detail-img img { width: 100%; height: 100%; object-fit: cover; }
-    .detail-row { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid var(--border); }
-    .detail-row .label { color: var(--text-light); font-size: 14px; }
-    .detail-row .value { font-weight: 600; font-size: 14px; }
-    .btn-danger {
-      background: var(--danger); color: white; border: none; padding: 12px;
-      border-radius: 12px; width: 100%; margin-top: 16px; font-size: 14px; cursor: pointer;
-    }
-    .toast {
-      position: fixed; top: 80px; left: 50%; transform: translateX(-50%);
-      background: var(--text); color: white; padding: 12px 24px;
-      border-radius: 12px; font-size: 14px; z-index: 300;
-      animation: fadeInOut 2s ease;
-    }
-    @keyframes fadeInOut {
-      0% { opacity: 0; transform: translateX(-50%) translateY(-10px); }
-      15% { opacity: 1; transform: translateX(-50%) translateY(0); }
-      85% { opacity: 1; }
-      100% { opacity: 0; }
-    }
+    *{margin:0;padding:0;box-sizing:border-box}
+    :root{--sage:#B5C4B1;--sage-dark:#8FA88B;--rose:#D4A5A5;--cream:#F5F0EB;--warm:#E8D5C4;--taupe:#C4B5A5;--blue:#A8B5C4;--text:#4A4A4A;--text-light:#8A8A8A;--bg:#FAFAF8;--card:#FFFFFF;--line:#E8E4DF}
+    body{font-family:-apple-system,'Hiragino Sans','PingFang SC','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);padding-bottom:72px;letter-spacing:.02em;-webkit-font-smoothing:antialiased}
+    .header{background:var(--bg);padding:18px 20px 14px;position:sticky;top:0;z-index:100;border-bottom:1px solid var(--line)}
+    .header-row{display:flex;justify-content:space-between;align-items:center}
+    .header h1{font-size:20px;font-weight:500;letter-spacing:.08em}
+    .header-icons{display:flex;gap:16px;align-items:center}
+    .header-icons svg{width:20px;height:20px;stroke:var(--text-light);stroke-width:1.5;fill:none}
+    .quick-stats{display:flex;gap:0;padding:16px 20px;background:var(--card);border-bottom:1px solid var(--line)}
+    .stat-item{flex:1;text-align:center;position:relative}
+    .stat-item:not(:last-child)::after{content:'';position:absolute;right:0;top:4px;bottom:4px;width:1px;background:var(--line)}
+    .stat-value{font-size:24px;font-weight:500;color:var(--sage-dark)}
+    .stat-label{font-size:11px;color:var(--text-light);margin-top:2px}
+    .page{display:none}.page.active{display:block}
+    .filter-section{padding:12px 16px;background:var(--bg)}
+    .filter-row{display:flex;gap:8px;align-items:center;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding-bottom:8px}
+    .filter-row::-webkit-scrollbar{display:none}
+    .filter-chip{padding:6px 14px;border-radius:20px;font-size:12px;color:var(--text-light);background:var(--card);border:1px solid var(--line);white-space:nowrap;cursor:pointer;transition:all .2s}
+    .filter-chip.active{background:var(--sage);color:#fff;border-color:var(--sage)}
+    .filter-row-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+    .season-label{font-size:12px;color:var(--text-light)}
+    .season-row{display:flex;gap:8px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding-bottom:4px}
+    .season-row::-webkit-scrollbar{display:none}
+    .season-chip{padding:4px 12px;border-radius:16px;font-size:11px;color:var(--text-light);background:var(--card);border:1px solid var(--line);white-space:nowrap;cursor:pointer;transition:all .2s}
+    .season-chip.active{background:var(--warm);color:#fff;border-color:var(--warm)}
+    .sort-btn{display:flex;align-items:center;gap:4px;padding:6px 12px;background:var(--card);border:1px solid var(--line);border-radius:16px;font-size:12px;color:var(--text-light);cursor:pointer;position:relative;flex-shrink:0}
+    .sort-btn svg{width:14px;height:14px;stroke:var(--text-light);stroke-width:1.5;fill:none}
+    .sort-dropdown{display:none;position:absolute;top:100%;right:0;margin-top:4px;background:var(--card);border:1px solid var(--line);border-radius:12px;box-shadow:0 4px 16px rgba(0,0,0,.08);z-index:50;min-width:120px;overflow:hidden}
+    .sort-dropdown.show{display:block}
+    .sort-option{padding:10px 14px;font-size:12px;color:var(--text);cursor:pointer;transition:background .15s}
+    .sort-option:hover{background:var(--cream)}
+    .sort-option.active{color:var(--sage-dark);font-weight:500}
+    .wardrobe-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:12px 16px}
+    .clothing-card{background:var(--card);border-radius:12px;overflow:hidden;border:1px solid var(--line);transition:transform .15s}
+    .clothing-card:active{transform:scale(.97)}
+    .clothing-img{width:100%;aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;position:relative}
+    .clothing-img svg{width:32px;height:32px;stroke:rgba(255,255,255,.7);stroke-width:1.5;fill:none}
+    .g1{background:linear-gradient(135deg,#D4A5A5,#E8C4C4)}.g2{background:linear-gradient(135deg,#B5C4B1,#C4D4C0)}.g3{background:linear-gradient(135deg,#A8B5C4,#C4D0E0)}.g4{background:linear-gradient(135deg,#E8D5C4,#F0E0D0)}.g5{background:linear-gradient(135deg,#C4B5A5,#D4C4B4)}
+    .season-tag{position:absolute;top:6px;right:6px;font-size:10px;background:rgba(255,255,255,.85);padding:2px 6px;border-radius:8px;backdrop-filter:blur(4px)}
+    .clothing-info{padding:8px}
+    .clothing-name{font-size:13px;font-weight:500;margin-bottom:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .clothing-stats{font-size:10px;color:var(--text-light)}
+    .outfit-section{padding:16px}
+    .outfit-header{font-size:15px;font-weight:600;margin-bottom:14px;display:flex;justify-content:space-between;align-items:center}
+    .outfit-header span{color:var(--text-light);font-weight:400;font-size:13px}
+    .outfit-card{display:flex;gap:14px;padding:14px;background:var(--card);border-radius:16px;border:1px solid var(--line);margin-bottom:12px}
+    .outfit-thumb{width:64px;height:64px;border-radius:12px;flex-shrink:0;display:flex;align-items:center;justify-content:center}
+    .outfit-thumb svg{width:24px;height:24px;stroke:rgba(255,255,255,.7);stroke-width:1.5;fill:none}
+    .outfit-body{flex:1}
+    .outfit-date{font-size:13px;font-weight:500;margin-bottom:4px}
+    .outfit-items{font-size:12px;color:var(--text-light);margin-bottom:6px;line-height:1.4}
+    .outfit-cost{font-size:12px;color:var(--sage-dark);font-weight:500}
+    .stats-section{padding:16px}
+    .stats-title{font-size:15px;font-weight:600;margin-bottom:12px}
+    .stats-overview{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:24px}
+    .stat-card{background:var(--card);border-radius:14px;padding:16px;text-align:center;border:1px solid var(--line)}
+    .stat-card .num{font-size:28px;font-weight:500;color:var(--sage-dark)}
+    .stat-card .label{font-size:11px;color:var(--text-light);margin-top:4px}
+    .freq-list{background:var(--card);border-radius:14px;border:1px solid var(--line);overflow:hidden;margin-bottom:24px}
+    .freq-item{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;border-bottom:1px solid var(--line)}
+    .freq-item:last-child{border-bottom:none}
+    .freq-name{font-size:13px;font-weight:500}
+    .freq-detail{font-size:12px;color:var(--text-light)}
+    .cat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+    .cat-card{background:var(--card);border-radius:14px;padding:16px;text-align:center;border:1px solid var(--line)}
+    .cat-card .num{font-size:24px;font-weight:500;color:var(--sage-dark)}
+    .cat-card .label{font-size:11px;color:var(--text-light);margin-top:4px}
+    .rss-config{margin:12px 16px;padding:14px;background:var(--card);border-radius:14px;border:1px dashed var(--line)}
+    .rss-config h3{font-size:13px;font-weight:600;margin-bottom:10px;display:flex;align-items:center;gap:6px}
+    .rss-config h3 svg{width:16px;height:16px;stroke:var(--sage-dark);stroke-width:2;fill:none}
+    .rss-input-group{display:flex;gap:8px;margin-bottom:10px}
+    .rss-input-group input{flex:1;padding:8px 12px;border:1px solid var(--line);border-radius:10px;font-size:12px;outline:none;font-family:inherit}
+    .rss-input-group input:focus{border-color:var(--sage)}
+    .rss-input-group button{padding:8px 14px;background:var(--sage);color:#fff;border:none;border-radius:10px;font-size:12px;cursor:pointer;white-space:nowrap}
+    .rss-presets{display:flex;flex-wrap:wrap;gap:6px}
+    .rss-preset{padding:5px 10px;background:var(--cream);border:1px solid var(--line);border-radius:14px;font-size:11px;cursor:pointer;color:var(--text)}
+    .rss-preset:hover{background:var(--sage);color:#fff;border-color:var(--sage)}
+    .insp-tabs{display:flex;gap:0;padding:12px 16px 10px;background:var(--bg);position:sticky;top:60px;z-index:99}
+    .insp-cat{padding:5px 14px;border-radius:18px;font-size:12px;color:var(--text-light);background:transparent;border:1px solid var(--line);cursor:pointer;transition:all .2s}
+    .insp-cat.active{background:var(--sage);color:#fff;border-color:var(--sage)}
+    .insp-feed{padding:8px 16px;display:flex;flex-direction:column;gap:12px}
+    .insp-card{background:var(--card);border-radius:14px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.04);transition:transform .2s}
+    .insp-card:active{transform:scale(.98)}
+    .insp-card .cover{position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+    .insp-card .cover.wide{height:140px}.insp-card .cover.tall{height:200px}.insp-card .cover.square{height:160px}
+    .cover-icon{width:48px;height:48px;stroke:rgba(255,255,255,.6);stroke-width:1;fill:none}
+    .cover-plant{position:absolute;bottom:8px;right:8px;width:32px;height:32px;opacity:.4}
+    .cover-plant svg{stroke:#fff;stroke-width:1;fill:none}
+    .insp-card .body{padding:12px 14px}
+    .insp-card .title{font-size:14px;font-weight:600;margin-bottom:4px;line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+    .insp-card .desc{font-size:12px;color:var(--text-light);line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin-bottom:8px}
+    .insp-card .meta{display:flex;justify-content:space-between;align-items:center;font-size:10px;color:var(--text-light)}
+    .insp-card .source{display:inline-flex;align-items:center;gap:3px;padding:2px 6px;background:var(--cream);border-radius:8px;font-size:9px}
+    .insp-card .likes{display:flex;align-items:center;gap:3px}
+    .insp-card .likes svg{width:12px;height:12px;fill:var(--rose);stroke:none}
+    .loading{text-align:center;padding:40px 20px;color:var(--text-light);font-size:13px}
+    .loading-spinner{width:28px;height:28px;border:3px solid var(--line);border-top-color:var(--sage);border-radius:50%;animation:spin .8s linear infinite;margin:0 auto 10px}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    .error-state{text-align:center;padding:40px 20px;color:var(--text-light)}
+    .error-state svg{width:40px;height:40px;stroke:var(--taupe);stroke-width:1.5;fill:none;margin-bottom:10px}
+    .error-state p{font-size:12px;margin-bottom:12px}
+    .retry-btn{padding:7px 20px;background:var(--sage);color:#fff;border:none;border-radius:18px;font-size:12px;cursor:pointer}
+    .plant-divider{display:flex;justify-content:center;padding:20px 0}
+    .plant-divider svg{width:60px;height:20px;stroke:var(--sage);stroke-width:1.2;fill:none;opacity:.5}
+    .fab{position:fixed;bottom:80px;right:20px;width:52px;height:52px;border-radius:50%;background:var(--sage);border:none;box-shadow:0 4px 16px rgba(181,196,177,.4);cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:90}
+    .fab svg{width:24px;height:24px;stroke:#fff;stroke-width:2;fill:none}
+    .bottom-nav{position:fixed;bottom:0;left:0;right:0;height:64px;background:var(--card);border-top:1px solid var(--line);display:flex;align-items:center;z-index:100;padding-bottom:env(safe-area-inset-bottom)}
+    .nav-btn{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;background:none;border:none;cursor:pointer;padding:8px 0}
+    .nav-btn svg{width:22px;height:22px;stroke:var(--text-light);stroke-width:1.5;fill:none}
+    .nav-btn span{font-size:10px;color:var(--text-light)}
+    .nav-btn.active svg{stroke:var(--sage-dark)}
+    .nav-btn.active span{color:var(--sage-dark);font-weight:500}
+    .install-banner{display:none;position:fixed;bottom:64px;left:16px;right:16px;background:var(--card);border-radius:16px;padding:16px;box-shadow:0 8px 32px rgba(0,0,0,.12);z-index:95;border:1px solid var(--line)}
+    .install-banner.show{display:block}
+    .install-row{display:flex;align-items:center;gap:12px}
+    .install-icon{width:44px;height:44px;border-radius:12px;background:var(--sage);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .install-icon svg{width:24px;height:24px;stroke:#fff;stroke-width:1.5;fill:none}
+    .install-text{flex:1}
+    .install-text .name{font-size:14px;font-weight:600}
+    .install-text .hint{font-size:11px;color:var(--text-light);margin-top:2px}
+    .install-actions{display:flex;gap:8px;margin-top:12px}
+    .install-actions button{flex:1;padding:10px;border-radius:10px;font-size:13px;cursor:pointer;border:none}
+    .btn-install{background:var(--sage);color:#fff}
+    .btn-later{background:var(--cream);color:var(--text)}
   </style>
 </head>
 <body>
-  <header class="header"><h1>☕ 拿铁衣橱</h1></header>
-  <main id="app">
-    <section id="tab-wardrobe" class="tab active">
-      <div class="toolbar"><div class="filter-chips">
-        <button class="chip active" data-filter="all">全部</button>
-        <button class="chip" data-filter="top">上装</button>
-        <button class="chip" data-filter="bottom">下装</button>
-        <button class="chip" data-filter="outer">外套</button>
-        <button class="chip" data-filter="shoes">鞋</button>
-        <button class="chip" data-filter="accessory">配饰</button>
-        <button class="chip" data-filter="dress">连衣裙</button>
-      </div></div>
-      <div id="clothes-grid" class="grid"></div>
-      <div id="empty-wardrobe" class="empty-state" style="display:none"><p>👗 衣橱还是空的</p><p>点击下方 + 添加你的第一件衣服吧</p></div>
-    </section>
-    <section id="tab-outfit" class="tab">
-      <div class="section-header"><h2>📸 今日穿搭</h2><button class="btn-primary" onclick="showAddOutfit()">+ 记录</button></div>
-      <div id="outfit-timeline"></div>
-      <div id="empty-outfit" class="empty-state" style="display:none"><p>还没有穿搭记录</p><p>记录你的每日穿搭，追踪穿着次数</p></div>
-    </section>
-    <section id="tab-inspiration" class="tab">
-      <div class="filter-chips">
-        <button class="chip active" data-insp="all">全部</button>
-        <button class="chip" data-insp="runway">秀场</button>
-        <button class="chip" data-insp="trend">趋势</button>
+  <header class="header">
+    <div class="header-row">
+      <h1 id="page-title">衣橱</h1>
+      <div class="header-icons">
+        <svg viewBox="0 0 32 32"><path d="M16 28 Q16 20 16 12"/><path d="M16 22 Q10 18 6 14"/><path d="M16 18 Q22 14 26 10"/><circle cx="6" cy="14" r="4" fill="var(--sage)" opacity="0.3"/><circle cx="26" cy="10" r="4" fill="var(--sage)" opacity="0.3"/></svg>
       </div>
-      <div id="inspiration-list"></div>
-    </section>
-    <section id="tab-stats" class="tab"><div id="stats-container"></div></section>
-  </main>
+    </div>
+  </header>
+
+  <div class="quick-stats">
+    <div class="stat-item"><div class="stat-value" id="stat-total">0</div><div class="stat-label">衣物</div></div>
+    <div class="stat-item"><div class="stat-value" id="stat-outfits">0</div><div class="stat-label">穿搭</div></div>
+    <div class="stat-item"><div class="stat-value" id="stat-avg">¥0</div><div class="stat-label">次均成本</div></div>
+  </div>
+
+  <div class="page active" id="page-wardrobe">
+    <div class="filter-section">
+      <div class="filter-row-header">
+        <div class="filter-row" id="category-filters">
+          <button class="filter-chip active" onclick="filterCategory('all',this)">全部</button>
+          <button class="filter-chip" onclick="filterCategory('top',this)">上装</button>
+          <button class="filter-chip" onclick="filterCategory('bottom',this)">下装</button>
+          <button class="filter-chip" onclick="filterCategory('outerwear',this)">外套</button>
+          <button class="filter-chip" onclick="filterCategory('dress',this)">连衣裙</button>
+          <button class="filter-chip" onclick="filterCategory('shoes',this)">鞋</button>
+          <button class="filter-chip" onclick="filterCategory('accessory',this)">配饰</button>
+        </div>
+        <div class="sort-btn" onclick="toggleSort(this)">
+          <svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h12M3 18h6"/></svg>
+          <span>排序</span>
+          <div class="sort-dropdown" id="sort-dropdown">
+            <div class="sort-option active" onclick="setSort(this,'date')">加入时间</div>
+            <div class="sort-option" onclick="setSort(this,'frequency')">穿着频率</div>
+            <div class="sort-option" onclick="setSort(this,'cost')">穿着成本</div>
+          </div>
+        </div>
+      </div>
+      <div class="season-label">季节</div>
+      <div class="season-row" id="season-filters">
+        <button class="season-chip active" onclick="filterSeason('all',this)">全部</button>
+        <button class="season-chip" onclick="filterSeason('spring',this)">🌸 春</button>
+        <button class="season-chip" onclick="filterSeason('summer',this)">☀️ 夏</button>
+        <button class="season-chip" onclick="filterSeason('autumn',this)">🍂 秋</button>
+        <button class="season-chip" onclick="filterSeason('winter',this)">❄️ 冬</button>
+      </div>
+    </div>
+    <div class="wardrobe-grid" id="wardrobe-grid"></div>
+    <div class="plant-divider">
+      <svg viewBox="0 0 60 20"><path d="M0 10 Q15 10 30 10 Q45 10 60 10"/><path d="M15 10 Q12 6 10 4"/><path d="M30 10 Q28 5 26 3"/><path d="M45 10 Q48 6 50 4"/><circle cx="10" cy="4" r="2.5" fill="var(--sage)" opacity="0.3"/><circle cx="26" cy="3" r="2.5" fill="var(--sage)" opacity="0.3"/><circle cx="50" cy="4" r="2.5" fill="var(--sage)" opacity="0.3"/></svg>
+    </div>
+  </div>
+
+  <div class="page" id="page-outfit">
+    <div class="outfit-section">
+      <div class="outfit-header">最近穿搭 <span id="outfit-count">共 0 次</span></div>
+      <div id="outfit-list"></div>
+    </div>
+  </div>
+
+  <div class="page" id="page-stats">
+    <div class="stats-section">
+      <div class="stats-title">总览</div>
+      <div class="stats-overview">
+        <div class="stat-card"><div class="num" id="stat2-total">0</div><div class="label">衣物总数</div></div>
+        <div class="stat-card"><div class="num" id="stat2-outfits">0</div><div class="label">穿搭记录</div></div>
+        <div class="stat-card"><div class="num" id="stat2-avg">¥0</div><div class="label">次均成本</div></div>
+        <div class="stat-card"><div class="num" id="stat2-value">¥0</div><div class="label">衣橱总值</div></div>
+      </div>
+      <div class="stats-title">穿着频率</div>
+      <div class="freq-list" id="freq-list"></div>
+      <div class="stats-title">品类分布</div>
+      <div class="cat-grid" id="cat-grid"></div>
+    </div>
+  </div>
+
+  <div class="page" id="page-insp">
+    <div class="rss-config" id="rss-config">
+      <h3><svg viewBox="0 0 24 24"><path d="M4 11a9 9 0 019 9M4 4a16 16 0 0116 16"/><circle cx="4" cy="19" r="2"/></svg> RSS 订阅源</h3>
+      <div class="rss-input-group">
+        <input type="text" id="rss-url-input" placeholder="输入 RSS 链接...">
+        <button onclick="addCustomRSS()">添加</button>
+      </div>
+      <div class="rss-presets">
+        <button class="rss-preset" onclick="loadPreset('vogue')">📰 Vogue</button>
+        <button class="rss-preset" onclick="loadPreset('elle')">📰 ELLE</button>
+        <button class="rss-preset" onclick="loadPreset('hypebeast')">👟 Hypebeast</button>
+        <button class="rss-preset" onclick="loadPreset('refinery29')">✨ Refinery29</button>
+        <button class="rss-preset" onclick="loadPreset('all')">📚 全部加载</button>
+      </div>
+    </div>
+    <div class="insp-tabs">
+      <button class="insp-cat active" onclick="switchInspTab('all',this)">全部</button>
+      <button class="insp-cat" onclick="switchInspTab('fashion',this)">时尚资讯</button>
+      <button class="insp-cat" onclick="switchInspTab('street',this)">街头穿搭</button>
+      <button class="insp-cat" onclick="switchInspTab('tips',this)">穿搭技巧</button>
+    </div>
+    <div class="insp-feed" id="insp-feed">
+      <div class="loading">点击上方预设按钮加载内容</div>
+    </div>
+  </div>
+
+  <button class="fab" onclick="alert('添加衣物功能开发中...')">
+    <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+  </button>
+
   <nav class="bottom-nav">
-    <button class="nav-btn active" data-tab="wardrobe"><span class="nav-icon">👔</span><span>衣橱</span></button>
-    <button class="nav-btn" data-tab="outfit"><span class="nav-icon">📸</span><span>穿搭</span></button>
-    <button class="nav-btn" data-tab="inspiration"><span class="nav-icon">✨</span><span>灵感</span></button>
-    <button class="nav-btn" data-tab="stats"><span class="nav-icon">📊</span><span>统计</span></button>
+    <button class="nav-btn active" data-page="wardrobe" onclick="switchPage('wardrobe')"><svg viewBox="0 0 24 24"><path d="M12 4 L4 10 L4 20 L10 20 L10 14 L14 14 L14 20 L20 20 L20 10Z"/></svg><span>衣橱</span></button>
+    <button class="nav-btn" data-page="outfit" onclick="switchPage('outfit')"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="12" cy="12" r="4"/></svg><span>穿搭</span></button>
+    <button class="nav-btn" data-page="stats" onclick="switchPage('stats')"><svg viewBox="0 0 24 24"><rect x="3" y="12" width="4" height="9" rx="1"/><rect x="10" y="7" width="4" height="14" rx="1"/><rect x="17" y="3" width="4" height="18" rx="1"/></svg><span>统计</span></button>
+    <button class="nav-btn" data-page="insp" onclick="switchPage('insp')"><svg viewBox="0 0 24 24"><polygon points="12,2 15,9 22,9 16,14 18,22 12,17 6,22 8,14 2,9 9,9"/></svg><span>灵感</span></button>
   </nav>
-  <div id="modal-add-clothes" class="modal">
-    <div class="modal-content"><div class="modal-header"><h3>添加衣物</h3><button class="close-btn" onclick="closeModal('modal-add-clothes')">&times;</button></div>
-      <div class="modal-body">
-        <div class="upload-area" onclick="document.getElementById('file-input').click()"><span>📷 点击上传衣服照片</span><input type="file" id="file-input" accept="image/*" style="display:none" onchange="handleFileUpload(event)"></div>
-        <img id="preview-img" style="display:none;max-width:100%;border-radius:12px;margin:12px 0">
-        <form id="clothes-form" onsubmit="addClothes(event)">
-          <div class="form-group"><label>名称</label><input type="text" id="c-name" placeholder="如：白色衬衫" required></div>
-          <div class="form-row">
-            <div class="form-group"><label>品类</label><select id="c-category"><option value="top">上装</option><option value="bottom">下装</option><option value="outer">外套</option><option value="dress">连衣裙</option><option value="shoes">鞋</option><option value="accessory">配饰</option><option value="other">其他</option></select></div>
-            <div class="form-group"><label>颜色</label><input type="text" id="c-color" placeholder="如：白色"></div>
-          </div>
-          <div class="form-row">
-            <div class="form-group"><label>品牌</label><input type="text" id="c-brand" placeholder="如：优衣库"></div>
-            <div class="form-group"><label>价格 (¥)</label><input type="number" id="c-price" placeholder="0" min="0" step="0.01"></div>
-          </div>
-          <div class="form-group"><label>季节</label><select id="c-season"><option value="all">四季</option><option value="spring">春</option><option value="summer">夏</option><option value="autumn">秋</option><option value="winter">冬</option></select></div>
-          <div class="form-group"><label>标签（逗号分隔）</label><input type="text" id="c-tags" placeholder="如：通勤,休闲,百搭"></div>
-          <button type="submit" class="btn-primary full-width">添加到衣橱</button>
-        </form>
-      </div>
+
+  <div class="install-banner" id="install-banner">
+    <div class="install-row">
+      <div class="install-icon"><svg viewBox="0 0 24 24"><path d="M12 4 L4 10 L4 20 L10 20 L10 14 L14 14 L14 20 L20 20 L20 10Z"/></svg></div>
+      <div class="install-text"><div class="name">wear 穿</div><div class="hint">添加到主屏幕，快速打开</div></div>
+    </div>
+    <div class="install-actions">
+      <button class="btn-later" onclick="dismissInstall()">稍后</button>
+      <button class="btn-install" onclick="doInstall()">安装</button>
     </div>
   </div>
-  <div id="modal-add-outfit" class="modal">
-    <div class="modal-content"><div class="modal-header"><h3>记录穿搭</h3><button class="close-btn" onclick="closeModal('modal-add-outfit')">&times;</button></div>
-      <div class="modal-body">
-        <div class="upload-area" onclick="document.getElementById('outfit-file-input').click()"><span>📷 上传今日穿搭照片</span><input type="file" id="outfit-file-input" accept="image/*" style="display:none" onchange="handleOutfitUpload(event)"></div>
-        <img id="outfit-preview" style="display:none;max-width:100%;border-radius:12px;margin:12px 0">
-        <form id="outfit-form" onsubmit="addOutfit(event)">
-          <div class="form-group"><label>选择搭配的衣物</label><div id="outfit-items-select" class="outfit-items-grid"></div></div>
-          <div class="form-row">
-            <div class="form-group"><label>场合</label><select id="o-occasion"><option value="">无</option><option value="work">通勤</option><option value="casual">休闲</option><option value="date">约会</option><option value="party">聚会</option><option value="sport">运动</option><option value="formal">正式</option></select></div>
-            <div class="form-group"><label>天气</label><input type="text" id="o-weather" placeholder="如：晴天 25°C"></div>
-          </div>
-          <div class="form-group"><label>备注</label><textarea id="o-notes" rows="2" placeholder="今天的感觉..."></textarea></div>
-          <button type="submit" class="btn-primary full-width">保存穿搭</button>
-        </form>
-      </div>
-    </div>
-  </div>
-  <div id="modal-clothes-detail" class="modal">
-    <div class="modal-content"><div class="modal-header"><h3 id="detail-title">衣物详情</h3><button class="close-btn" onclick="closeModal('modal-clothes-detail')">&times;</button></div>
-      <div class="modal-body" id="detail-body"></div>
-    </div>
-  </div>
-  <button class="fab" onclick="showAddClothes()">+</button>
+
   <script>
-    const STORAGE_KEY = 'wardrobe_data';
-    function getData() { try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || { clothes: [], outfits: [], inspirations: [] }; } catch { return { clothes: [], outfits: [], inspirations: [] }; } }
-    function saveData(d) { localStorage.setItem(STORAGE_KEY, JSON.stringify(d)); }
-    function genId() { return Date.now().toString(36) + Math.random().toString(36).slice(2, 8); }
-    function seedInspirations() {
-      const d = getData();
-      if (d.inspirations.length === 0) {
-        d.inspirations = [
-          { id: genId(), type: 'runway', region: 'europe', title: '2026 春夏巴黎时装周', description: '极简主义回归，廓形西装与飘逸裙装的碰撞', imageUrl: '', source: 'Vogue Runway', date: '2026-03-15' },
-          { id: genId(), type: 'trend', region: 'japan', title: '日系 City Boy 风格持续流行', description: '宽松剪裁、层叠穿搭、中性色调', imageUrl: '', source: 'POPEYE', date: '2026-04-01' },
-          { id: genId(), type: 'trend', region: 'korea', title: '韩系 Clean Fit 风', description: '干净利落的线条，低饱和度配色，注重质感', imageUrl: '', source: 'W Concept', date: '2026-04-10' },
-          { id: genId(), type: 'trend', region: 'china', title: '新中式穿搭热潮', description: '盘扣、立领、刺绣等传统元素与现代设计融合', imageUrl: '', source: '小红书', date: '2026-05-01' },
-          { id: genId(), type: 'trend', region: 'us', title: 'Y2K 复古回潮', description: '低腰裤、露脐装、金属色配饰，千禧年风格回归', imageUrl: '', source: 'Instagram', date: '2026-04-20' },
-        ];
-        saveData(d);
+    var STORAGE_KEY='wardrobe_data',RSS_CACHE_KEY='wardrobe_rss_cache';
+    var sampleData={clothing:[
+      {id:1,name:'白衬衫',category:'top',season:'summer',price:149,wears:12,gradient:'g2',added:'2026-03-01'},
+      {id:2,name:'卡其裤',category:'bottom',season:'autumn',price:299,wears:8,gradient:'g4',added:'2026-03-05'},
+      {id:3,name:'针织开衫',category:'outerwear',season:'winter',price:380,wears:5,gradient:'g1',added:'2026-02-15'},
+      {id:4,name:'帆布鞋',category:'shoes',season:'spring',price:239,wears:15,gradient:'g3',added:'2026-01-20'},
+      {id:5,name:'碎花裙',category:'dress',season:'summer',price:249,wears:3,gradient:'g1',added:'2026-04-01'},
+      {id:6,name:'托特包',category:'accessory',season:'spring',price:299,wears:10,gradient:'g5',added:'2026-02-28'},
+      {id:7,name:'羊毛大衣',category:'outerwear',season:'winter',price:899,wears:2,gradient:'g4',added:'2026-01-10'},
+      {id:8,name:'亚麻短裤',category:'bottom',season:'summer',price:149,wears:6,gradient:'g2',added:'2026-04-15'},
+      {id:9,name:'条纹T恤',category:'top',season:'spring',price:99,wears:9,gradient:'g3',added:'2026-03-20'},
+      {id:10,name:'牛仔外套',category:'outerwear',season:'autumn',price:359,wears:7,gradient:'g5',added:'2026-02-10'},
+      {id:11,name:'丝巾',category:'accessory',season:'spring',price:129,wears:4,gradient:'g1',added:'2026-04-05'},
+      {id:12,name:'乐福鞋',category:'shoes',season:'autumn',price:459,wears:6,gradient:'g4',added:'2026-03-15'}
+    ],outfits:[
+      {id:1,date:'2026-05-09',items:['白衬衫','卡其裤','帆布鞋'],occasion:'',cost:26},
+      {id:2,date:'2026-05-08',items:['针织开衫','碎花裙'],occasion:'通勤',cost:112.7},
+      {id:3,date:'2026-05-07',items:['白衬衫','碎花裙','托特包'],occasion:'',cost:37.7},
+      {id:4,date:'2026-05-06',items:['条纹T恤','亚麻短裤','帆布鞋'],occasion:'周末',cost:16.1},
+      {id:5,date:'2026-05-05',items:['白衬衫','卡其裤','乐福鞋'],occasion:'通勤',cost:42.3}
+    ]};
+
+    function loadData(){try{var s=localStorage.getItem(STORAGE_KEY);if(s)return JSON.parse(s)}catch(e){}return sampleData}
+    function saveData(d){localStorage.setItem(STORAGE_KEY,JSON.stringify(d))}
+    var appData=loadData();
+    var currentCategory='all',currentSeason='all',currentSort='date';
+    var pageTitles={wardrobe:'衣橱',outfit:'穿搭',stats:'统计',insp:'灵感'};
+
+    function switchPage(page){
+      document.querySelectorAll('.page').forEach(function(p){p.classList.remove('active')});
+      document.querySelectorAll('.nav-btn').forEach(function(b){b.classList.remove('active')});
+      document.getElementById('page-'+page).classList.add('active');
+      document.querySelector('[data-page="'+page+'"]').classList.add('active');
+      document.getElementById('page-title').textContent=pageTitles[page]||'wear 穿';
+    }
+
+    function updateQuickStats(){
+      var t=appData.clothing.length,o=appData.outfits.length;
+      var avg=o>0?(appData.outfits.reduce(function(s,x){return s+x.cost},0)/o).toFixed(1):'0';
+      document.getElementById('stat-total').textContent=t;
+      document.getElementById('stat-outfits').textContent=o;
+      document.getElementById('stat-avg').textContent='¥'+avg;
+    }
+
+    function getClothingIcon(cat){
+      var icons={top:'<path d="M8 4 L4 10 L4 20 L20 20 L20 10 L16 4 L12 8Z"/>',bottom:'<path d="M6 4 L18 4 L16 20 L12 14 L8 20Z"/>',outerwear:'<path d="M12 4 L4 10 L4 20 L10 20 L10 14 L14 14 L14 20 L20 20 L20 10Z"/>',dress:'<path d="M12 4 L8 4 L4 20 L20 20 L16 4Z"/>',shoes:'<path d="M4 16 L20 16 L20 20 L4 20Z M6 16 L8 10 L16 10 L18 16"/>',accessory:'<circle cx="12" cy="12" r="8"/>'};
+      return icons[cat]||icons.top;
+    }
+    function getSeasonEmoji(s){var e={spring:'🌸',summer:'☀️',autumn:'🍂',winter:'❄️'};return e[s]||''}
+
+    function renderWardrobe(){
+      var grid=document.getElementById('wardrobe-grid');
+      var items=appData.clothing.slice();
+      if(currentCategory!=='all')items=items.filter(function(c){return c.category===currentCategory});
+      if(currentSeason!=='all')items=items.filter(function(c){return c.season===currentSeason});
+      if(currentSort==='frequency')items.sort(function(a,b){return b.wears-a.wears});
+      else if(currentSort==='cost')items.sort(function(a,b){return(a.price/Math.max(a.wears,1))-(b.price/Math.max(b.wears,1))});
+      else items.sort(function(a,b){return new Date(b.added)-new Date(a.added)});
+      if(items.length===0){grid.innerHTML='<div style="grid-column:1/-1;text-align:center;padding:40px;color:var(--text-light);font-size:13px">暂无衣物</div>';return}
+      grid.innerHTML=items.map(function(c){
+        var avg=(c.price/Math.max(c.wears,1)).toFixed(0);
+        return '<div class="clothing-card"><div class="clothing-img '+c.gradient+'"><svg viewBox="0 0 24 24">'+getClothingIcon(c.category)+'</svg><span class="season-tag">'+getSeasonEmoji(c.season)+'</span></div><div class="clothing-info"><div class="clothing-name">'+c.name+'</div><div class="clothing-stats">穿 '+c.wears+' 次 · ¥'+avg+'/次</div></div></div>';
+      }).join('');
+    }
+
+    function filterCategory(cat,el){currentCategory=cat;document.querySelectorAll('#category-filters .filter-chip').forEach(function(c){c.classList.remove('active')});el.classList.add('active');renderWardrobe()}
+    function filterSeason(s,el){currentSeason=s;document.querySelectorAll('#season-filters .season-chip').forEach(function(c){c.classList.remove('active')});el.classList.add('active');renderWardrobe()}
+    function toggleSort(btn){document.getElementById('sort-dropdown').classList.toggle('show')}
+    function setSort(el,type){currentSort=type;document.querySelectorAll('.sort-option').forEach(function(o){o.classList.remove('active')});el.classList.add('active');document.getElementById('sort-dropdown').classList.remove('show');renderWardrobe()}
+
+    function renderOutfits(){
+      var list=document.getElementById('outfit-list');
+      document.getElementById('outfit-count').textContent='共 '+appData.outfits.length+' 次';
+      if(appData.outfits.length===0){list.innerHTML='<div class="loading">暂无穿搭记录</div>';return}
+      var grads=['g1','g2','g3','g4','g5'];
+      list.innerHTML=appData.outfits.map(function(o){
+        var g=grads[o.id%5],d=o.date.replace(/-/g,'.'),it=o.items.join(' · '),oc=o.occasion?' · '+o.occasion:'';
+        return '<div class="outfit-card"><div class="outfit-thumb '+g+'"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="12" cy="12" r="4"/></svg></div><div class="outfit-body"><div class="outfit-date">'+d+oc+'</div><div class="outfit-items">'+it+'</div><div class="outfit-cost">¥'+o.cost.toFixed(1)+'</div></div></div>';
+      }).join('');
+    }
+
+    function renderStats(){
+      var t=appData.clothing.length,o=appData.outfits.length;
+      var avg=o>0?(appData.outfits.reduce(function(s,x){return s+x.cost},0)/o).toFixed(1):'0';
+      var tv=appData.clothing.reduce(function(s,c){return s+c.price},0);
+      document.getElementById('stat2-total').textContent=t;
+      document.getElementById('stat2-outfits').textContent=o;
+      document.getElementById('stat2-avg').textContent='¥'+avg;
+      document.getElementById('stat2-value').textContent='¥'+tv.toLocaleString();
+      var fl=document.getElementById('freq-list');
+      var sorted=appData.clothing.slice().sort(function(a,b){return b.wears-a.wears}).slice(0,6);
+      fl.innerHTML=sorted.map(function(c){var a=(c.price/Math.max(c.wears,1)).toFixed(0);return '<div class="freq-item"><div class="freq-name">'+c.name+'</div><div class="freq-detail">'+c.wears+' 次 · ¥'+a+'/次</div></div>'}).join('');
+      var cg=document.getElementById('cat-grid');
+      var cats={top:'上装',bottom:'下装',outerwear:'外套',dress:'连衣裙',shoes:'鞋',accessory:'其他'};
+      var counts={};appData.clothing.forEach(function(c){var k=cats[c.category]||'其他';counts[k]=(counts[k]||0)+1});
+      cg.innerHTML=Object.keys(counts).map(function(k){return '<div class="cat-card"><div class="num">'+counts[k]+'</div><div class="label">'+k+'</div></div>'}).join('');
+    }
+
+    // RSS
+    var RSS_PRESETS={
+      vogue:{name:'Vogue',url:'https://www.vogue.com/feed',category:'fashion'},
+      elle:{name:'ELLE',url:'https://www.elle.com/rss/fashion/',category:'fashion'},
+      hypebeast:{name:'Hypebeast',url:'https://hypebeast.com/fashion/feed',category:'street'},
+      refinery29:{name:'Refinery29',url:'https://www.refinery29.com/style/feed.xml',category:'tips'}
+    };
+    var CORS_PROXY='https://api.allorigins.win/raw?url=';
+    var allArticles=[];
+
+    function loadRSSCache(){try{var c=localStorage.getItem(RSS_CACHE_KEY);if(c){var d=JSON.parse(c);if(Date.now()-d.timestamp<3600000){allArticles=d.articles;renderArticles(allArticles);return true}}}catch(e){}return false}
+    function saveRSSCache(a){try{localStorage.setItem(RSS_CACHE_KEY,JSON.stringify({timestamp:Date.now(),articles:a}))}catch(e){}}
+
+    function fetchRSS(url){
+      return fetch(CORS_PROXY+encodeURIComponent(url)).then(function(r){
+        if(!r.ok)throw new Error('Network error');
+        return r.text();
+      }).then(function(text){
+        var parser=new DOMParser();
+        var xml=parser.parseFromString(text,'text/xml');
+        if(xml.querySelector('parsererror'))throw new Error('XML parse error');
+        var items=xml.querySelectorAll('item');
+        var articles=[];
+        items.forEach(function(item){
+          var title=item.querySelector('title');title=title?title.textContent:'Untitled';
+          var link=item.querySelector('link');link=link?link.textContent:'#';
+          var desc=item.querySelector('description');desc=desc?desc.textContent:'';
+          var pubDate=item.querySelector('pubDate');pubDate=pubDate?pubDate.textContent:'';
+          var media=item.querySelector('media\\:content, enclosure');
+          var image=media?media.getAttribute('url'):'';
+          var cleanDesc=desc.replace(/<[^>]*>/g,'').substring(0,150);
+          var date=pubDate?new Date(pubDate).toLocaleDateString('zh-CN'):'';
+          articles.push({title:title,link:link,desc:cleanDesc,date:date,image:image});
+        });
+        return articles;
+      }).catch(function(e){console.error('RSS error:',e);return[]});
+    }
+
+    function renderArticles(articles){
+      var feed=document.getElementById('insp-feed');
+      if(articles.length===0){
+        feed.innerHTML='<div class="error-state"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg><p>无法加载内容，请检查网络或 RSS 链接</p><button class="retry-btn" onclick="loadPreset(\'all\')">重新加载</button></div>';
+        return;
       }
-    }
-    seedInspirations();
-    let currentFilter = 'all', currentInspFilter = 'all', uploadedImage = '', outfitImage = '', selectedOutfitItems = [];
-    const CATEGORY_MAP = { top:'上装', bottom:'下装', outer:'外套', dress:'连衣裙', shoes:'鞋', accessory:'配饰', other:'其他' };
-    const CATEGORY_EMOJI = { top:'👕', bottom:'👖', outer:'🧥', dress:'👗', shoes:'👟', accessory:'👜', other:'📦' };
-    const SEASON_MAP = { all:'四季', spring:'春', summer:'夏', autumn:'秋', winter:'冬' };
-    const OCCASION_MAP = { work:'通勤', casual:'休闲', date:'约会', party:'聚会', sport:'运动', formal:'正式' };
-    document.addEventListener('DOMContentLoaded', () => { setupNav(); setupFilters(); loadClothes(); loadInspirations(); });
-    function setupNav() { document.querySelectorAll('.nav-btn').forEach(btn => { btn.addEventListener('click', () => switchTab(btn.dataset.tab)); }); }
-    function switchTab(tab) {
-      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-      document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
-      document.getElementById('tab-' + tab).classList.add('active');
-      document.querySelector('[data-tab="' + tab + '"]').classList.add('active');
-      if (tab === 'stats') loadStats(); if (tab === 'outfit') loadOutfits();
-    }
-    function setupFilters() {
-      document.querySelectorAll('[data-filter]').forEach(chip => {
-        chip.addEventListener('click', () => {
-          document.querySelectorAll('[data-filter]').forEach(c => c.classList.remove('active'));
-          chip.classList.add('active'); currentFilter = chip.dataset.filter; loadClothes();
-        });
-      });
-      document.querySelectorAll('[data-insp]').forEach(chip => {
-        chip.addEventListener('click', () => {
-          document.querySelectorAll('[data-insp]').forEach(c => c.classList.remove('active'));
-          chip.classList.add('active'); currentInspFilter = chip.dataset.insp; loadInspirations();
-        });
-      });
-    }
-    function loadClothes() {
-      const d = getData(); let c = d.clothes;
-      if (currentFilter !== 'all') c = c.filter(x => x.category === currentFilter);
-      renderClothes(c);
-    }
-    function renderClothes(arr) {
-      const grid = document.getElementById('clothes-grid'), empty = document.getElementById('empty-wardrobe');
-      if (arr.length === 0) { grid.innerHTML = ''; empty.style.display = 'block'; return; }
-      empty.style.display = 'none';
-      grid.innerHTML = arr.map(c => {
-        const cost = c.wearCount > 0 ? '¥' + (c.price / c.wearCount).toFixed(1) + '/次' : '未穿过';
-        return '<div class="clothes-card" onclick="showDetail(\'' + c.id + '\')"><div class="img-wrapper">' + (c.imageUrl ? '<img src="' + c.imageUrl + '" alt="' + c.name + '">' : (CATEGORY_EMOJI[c.category] || '👕')) + '</div><div class="info"><div class="name">' + c.name + '</div><div class="meta"><span>¥' + (c.price || 0) + '</span><span class="cost">' + cost + '</span></div></div></div>';
+      var grads=['g1','g2','g3','g4','g5'],heights=['wide','tall','square'];
+      feed.innerHTML=articles.map(function(a,i){
+        var imgHtml=a.image?'<img src="'+a.image+'" style="width:100%;height:100%;object-fit:cover;" onerror="this.outerHTML=\'<svg class=\\\'cover-icon\\\' viewBox=\\\'0 0 40 40\\\'><path d=\\\'M20 4 L36 14 L36 30 L20 36 L4 30 L4 14Z\\\'/><circle cx=\\\'20\\\' cy=\\\'20\\\' r=\\\'6\\\'/></svg>\'">':'<svg class="cover-icon" viewBox="0 0 40 40"><path d="M20 4 L36 14 L36 30 L20 36 L4 30 L4 14Z"/><circle cx="20" cy="20" r="6"/></svg>';
+        return '<div class="insp-card" onclick="window.open(\''+a.link+'\',\'_blank\')"><div class="cover '+heights[i%3]+' '+grads[i%5]+'">'+imgHtml+'<div class="cover-plant"><svg viewBox="0 0 40 40"><path d="M20 36 Q20 28 20 20"/><path d="M20 28 Q14 24 10 20"/><path d="M20 24 Q26 20 30 16"/><circle cx="10" cy="20" r="3"/><circle cx="30" cy="16" r="3"/></svg></div></div><div class="body"><div class="title">'+a.title+'</div><div class="desc">'+a.desc+'</div><div class="meta"><span class="source">'+(a.source||'RSS')+'</span><div class="likes"><svg viewBox="0 0 24 24"><path d="M12 21C12 21 3 13.5 3 8.5C3 5.42 5.42 3 8.5 3C10.24 3 11.91 3.81 12 5C12.09 3.81 13.76 3 15.5 3C18.58 3 21 5.42 21 8.5C21 13.5 12 21 12 21Z"/></svg> '+Math.floor(Math.random()*200+20)+'</div></div></div></div>';
       }).join('');
     }
-    function showAddClothes() { document.getElementById('modal-add-clothes').classList.add('show'); resetClothesForm(); }
-    function resetClothesForm() { document.getElementById('clothes-form').reset(); document.getElementById('preview-img').style.display = 'none'; uploadedImage = ''; }
-    function handleFileUpload(event) {
-      const file = event.target.files[0]; if (!file) return;
-      const reader = new FileReader();
-      reader.onload = function(e) {
-        uploadedImage = e.target.result;
-        document.getElementById('preview-img').src = uploadedImage;
-        document.getElementById('preview-img').style.display = 'block';
-      };
-      reader.readAsDataURL(file);
-    }
-    function addClothes(event) {
-      event.preventDefault();
-      const data = getData();
-      const tags = document.getElementById('c-tags').value.split(/[,，]/).map(t => t.trim()).filter(Boolean);
-      data.clothes.push({
-        id: genId(), name: document.getElementById('c-name').value,
-        category: document.getElementById('c-category').value,
-        color: document.getElementById('c-color').value,
-        brand: document.getElementById('c-brand').value,
-        price: parseFloat(document.getElementById('c-price').value) || 0,
-        season: document.getElementById('c-season').value,
-        tags: tags, imageUrl: uploadedImage, wearCount: 0,
-        createdAt: new Date().toISOString()
+
+    function loadPreset(key){
+      if(key==='all'&&loadRSSCache())return;
+      var feed=document.getElementById('insp-feed');
+      feed.innerHTML='<div class="loading"><div class="loading-spinner"></div><div>正在加载内容...</div></div>';
+      var sources=key==='all'?Object.values(RSS_PRESETS):[RSS_PRESETS[key]];
+      allArticles=[];
+      var promises=sources.map(function(src){
+        return fetchRSS(src.url).then(function(articles){
+          return articles.map(function(a){return{title:a.title,link:a.link,desc:a.desc,date:a.date,image:a.image,category:src.category,source:src.name}});
+        });
       });
-      saveData(data); closeModal('modal-add-clothes'); loadClothes();
-      showToast('✅ 已添加到衣橱');
-    }
-    function showDetail(id) {
-      const data = getData(); const c = data.clothes.find(x => x.id === id);
-      if (!c) return;
-      const cost = c.wearCount > 0 ? '¥' + (c.price / c.wearCount).toFixed(2) : '—';
-      document.getElementById('detail-title').textContent = c.name;
-      document.getElementById('detail-body').innerHTML =
-        '<div class="detail-img">' + (c.imageUrl ? '<img src="' + c.imageUrl + '" alt="' + c.name + '">' : (CATEGORY_EMOJI[c.category] || '👕')) + '</div>' +
-        '<div class="detail-row"><span class="label">品类</span><span class="value">' + CATEGORY_MAP[c.category] + '</span></div>' +
-        '<div class="detail-row"><span class="label">颜色</span><span class="value">' + (c.color || '—') + '</span></div>' +
-        '<div class="detail-row"><span class="label">品牌</span><span class="value">' + (c.brand || '—') + '</span></div>' +
-        '<div class="detail-row"><span class="label">价格</span><span class="value">¥' + (c.price || 0) + '</span></div>' +
-        '<div class="detail-row"><span class="label">季节</span><span class="value">' + SEASON_MAP[c.season] + '</span></div>' +
-        '<div class="detail-row"><span class="label">穿着次数</span><span class="value">' + (c.wearCount || 0) + ' 次</span></div>' +
-        '<div class="detail-row"><span class="label">单次成本</span><span class="value" style="color:var(--success)">' + cost + '</span></div>' +
-        (c.tags && c.tags.length ? '<div class="detail-row"><span class="label">标签</span><span class="value">' + c.tags.join(', ') + '</span></div>' : '') +
-        '<button class="btn-primary full-width" onclick="recordWear(\'' + c.id + '\')">👆 记录一次穿着</button>' +
-        '<button class="btn-danger" onclick="deleteClothes(\'' + c.id + '\')">🗑️ 删除这件衣服</button>';
-      document.getElementById('modal-clothes-detail').classList.add('show');
-    }
-    function recordWear(id) {
-      const data = getData(); const c = data.clothes.find(x => x.id === id);
-      if (c) { c.wearCount = (c.wearCount || 0) + 1; saveData(data); }
-      closeModal('modal-clothes-detail'); loadClothes();
-      showToast('👍 已记录一次穿着');
-    }
-    function deleteClothes(id) {
-      if (!confirm('确定要删除这件衣服吗？')) return;
-      const data = getData();
-      data.clothes = data.clothes.filter(x => x.id !== id);
-      saveData(data); closeModal('modal-clothes-detail'); loadClothes();
-      showToast('已删除');
-    }
-    function loadOutfits() {
-      const data = getData();
-      const outfits = data.outfits.sort((a, b) => new Date(b.date) - new Date(a.date));
-      const container = document.getElementById('outfit-timeline'), empty = document.getElementById('empty-outfit');
-      if (outfits.length === 0) { container.innerHTML = ''; empty.style.display = 'block'; return; }
-      empty.style.display = 'none';
-      container.innerHTML = outfits.map(o => {
-        const itemNames = o.items.map(id => { const c = data.clothes.find(x => x.id === id); return c ? c.name : '?'; }).join(' + ');
-        const occasion = o.occasion ? ' · ' + (OCCASION_MAP[o.occasion] || o.occasion) : '';
-        const weather = o.weather ? ' · ' + o.weather : '';
-        return '<div class="outfit-card"><div class="outfit-img">' + (o.imageUrl ? '<img src="' + o.imageUrl + '" alt="穿搭">' : '📸') + '</div><div class="outfit-info"><div class="date">' + o.date + occasion + weather + '</div><div class="items">' + (itemNames || '未选择衣物') + '</div>' + (o.notes ? '<p style="font-size:12px;color:var(--text-light);margin-top:4px">' + o.notes + '</p>' : '') + '</div></div>';
-      }).join('');
-    }
-    function showAddOutfit() {
-      document.getElementById('modal-add-outfit').classList.add('show');
-      outfitImage = ''; selectedOutfitItems = [];
-      document.getElementById('outfit-preview').style.display = 'none';
-      loadOutfitItems();
-    }
-    function loadOutfitItems() {
-      const data = getData();
-      document.getElementById('outfit-items-select').innerHTML = data.clothes.map(c =>
-        '<div class="outfit-item" data-id="' + c.id + '" onclick="toggleOutfitItem(this, \'' + c.id + '\')"><div class="emoji">' + (CATEGORY_EMOJI[c.category] || '👕') + '</div><div class="name">' + c.name + '</div></div>'
-      ).join('');
-    }
-    function toggleOutfitItem(el, id) {
-      el.classList.toggle('selected');
-      if (selectedOutfitItems.includes(id)) selectedOutfitItems = selectedOutfitItems.filter(i => i !== id);
-      else selectedOutfitItems.push(id);
-    }
-    function handleOutfitUpload(event) {
-      const file = event.target.files[0]; if (!file) return;
-      const reader = new FileReader();
-      reader.onload = function(e) {
-        outfitImage = e.target.result;
-        document.getElementById('outfit-preview').src = outfitImage;
-        document.getElementById('outfit-preview').style.display = 'block';
-      };
-      reader.readAsDataURL(file);
-    }
-    function addOutfit(event) {
-      event.preventDefault();
-      const data = getData();
-      selectedOutfitItems.forEach(id => { const c = data.clothes.find(x => x.id === id); if (c) c.wearCount = (c.wearCount || 0) + 1; });
-      data.outfits.push({
-        id: genId(), date: new Date().toISOString().split('T')[0],
-        items: selectedOutfitItems, imageUrl: outfitImage,
-        occasion: document.getElementById('o-occasion').value,
-        weather: document.getElementById('o-weather').value,
-        notes: document.getElementById('o-notes').value,
-        createdAt: new Date().toISOString()
+      Promise.all(promises).then(function(results){
+        results.forEach(function(arts){allArticles=allArticles.concat(arts)});
+        allArticles.sort(function(a,b){return new Date(b.date)-new Date(a.date)});
+        saveRSSCache(allArticles);
+        renderArticles(allArticles);
       });
-      saveData(data); closeModal('modal-add-outfit'); loadOutfits(); loadClothes();
-      showToast('📸 穿搭已记录');
     }
-    function loadInspirations() {
-      const data = getData(); let items = data.inspirations;
-      if (currentInspFilter !== 'all') items = items.filter(i => i.type === currentInspFilter);
-      renderInspirations(items.sort((a, b) => new Date(b.date) - new Date(a.date)));
+
+    function addCustomRSS(){
+      var input=document.getElementById('rss-url-input');
+      var url=input.value.trim();if(!url)return;
+      var name=prompt('给这个订阅源起个名字：','自定义源');if(!name)return;
+      RSS_PRESETS['custom_'+Date.now()]={name:name,url:url,category:'fashion'};
+      var container=document.querySelector('.rss-presets');
+      var btn=document.createElement('button');btn.className='rss-preset';btn.textContent='📌 '+name;
+      btn.onclick=function(){loadRSS(url,'fashion',name)};container.appendChild(btn);
+      input.value='';loadRSS(url,'fashion',name);
     }
-    function renderInspirations(items) {
-      const regionMap = { china: '🇨🇳 中国', japan: '🇯🇵 日本', korea: '🇰🇷 韩国', us: '🇺🇸 欧美', europe: '🇪🇺 欧洲' };
-      const typeMap = { runway: '秀场', trend: '趋势', community: '社区' };
-      document.getElementById('inspiration-list').innerHTML = items.map(i =>
-        '<div class="inspiration-card"><span class="tag ' + i.type + '">' + (typeMap[i.type] || i.type) + (i.region ? ' · ' + (regionMap[i.region] || i.region) : '') + '</span><h4>' + i.title + '</h4><p>' + i.description + '</p><div class="source">📎 ' + i.source + ' · ' + i.date + '</div></div>'
-      ).join('');
+
+    function loadRSS(url,cat,name){
+      var feed=document.getElementById('insp-feed');
+      feed.innerHTML='<div class="loading"><div class="loading-spinner"></div><div>正在加载 '+name+'...</div></div>';
+      fetchRSS(url).then(function(articles){
+        allArticles=articles.map(function(a){return{title:a.title,link:a.link,desc:a.desc,date:a.date,image:a.image,category:cat,source:name}});
+        renderArticles(allArticles);
+      });
     }
-    function loadStats() {
-      const data = getData();
-      const totalItems = data.clothes.length, totalOutfits = data.outfits.length;
-      const totalSpent = data.clothes.reduce((s, c) => s + (c.price || 0), 0);
-      const totalWears = data.clothes.reduce((s, c) => s + (c.wearCount || 0), 0);
-      const avgCost = totalWears > 0 ? (totalSpent / totalWears).toFixed(2) : '0.00';
-      const categories = {};
-      data.clothes.forEach(c => { categories[c.category] = (categories[c.category] || 0) + 1; });
-      document.getElementById('stats-container').innerHTML =
-        '<div class="stats-grid">' +
-        '<div class="stat-card"><div class="stat-value">' + totalItems + '</div><div class="stat-label">衣橱总件数</div></div>' +
-        '<div class="stat-card"><div class="stat-value">' + totalOutfits + '</div><div class="stat-label">穿搭记录</div></div>' +
-        '<div class="stat-card"><div class="stat-value">¥' + totalSpent.toLocaleString() + '</div><div class="stat-label">总花费</div></div>' +
-        '<div class="stat-card"><div class="stat-value">¥' + avgCost + '</div><div class="stat-label">平均单次穿着成本</div></div>' +
-        '</div>' +
-        '<div class="stat-card" style="margin-top:12px"><div class="stat-label" style="margin-bottom:12px;font-weight:600">品类分布</div>' +
-        Object.entries(categories).map(([cat, count]) =>
-          '<div class="detail-row"><span class="label">' + (CATEGORY_EMOJI[cat] || '') + ' ' + (CATEGORY_MAP[cat] || cat) + '</span><span class="value">' + count + ' 件</span></div>'
-        ).join('') + '</div>';
+
+    function switchInspTab(cat,el){
+      document.querySelectorAll('.insp-cat').forEach(function(c){c.classList.remove('active')});
+      el.classList.add('active');
+      if(cat==='all')renderArticles(allArticles);
+      else renderArticles(allArticles.filter(function(a){return a.category===cat}));
     }
-    function closeModal(id) { document.getElementById(id).classList.remove('show'); }
-    document.querySelectorAll('.modal').forEach(modal => {
-      modal.addEventListener('click', (e) => { if (e.target === modal) modal.classList.remove('show'); });
+
+    // Install
+    var deferredPrompt;
+    window.addEventListener('beforeinstallprompt',function(e){e.preventDefault();deferredPrompt=e;document.getElementById('install-banner').classList.add('show')});
+    function dismissInstall(){document.getElementById('install-banner').classList.remove('show')}
+    function doInstall(){if(deferredPrompt){deferredPrompt.prompt();deferredPrompt.userChoice.then(function(r){if(r.outcome==='accepted')dismissInstall()});deferredPrompt=null}}
+
+    // Close sort dropdown on outside click
+    document.addEventListener('click',function(e){
+      if(!e.target.closest('.sort-btn')&&!e.target.closest('.sort-dropdown')){
+        document.getElementById('sort-dropdown').classList.remove('show');
+      }
     });
-    function showToast(msg) {
-      const toast = document.createElement('div');
-      toast.className = 'toast'; toast.textContent = msg;
-      document.body.appendChild(toast);
-      setTimeout(() => toast.remove(), 2200);
-    }
-    // ============ PWA Service Worker ============
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => { navigator.serviceWorker.register('./sw.js').catch(() => {}); });
-    }
-    // ============ PWA Install Prompt ============
-    let deferredPrompt = null;
-    window.addEventListener('beforeinstallprompt', (e) => { e.preventDefault(); deferredPrompt = e; showInstallBanner(); });
-    function showInstallBanner() {
-      if (document.getElementById('install-banner')) return;
-      const banner = document.createElement('div');
-      banner.id = 'install-banner';
-      banner.style.cssText = 'position:fixed;bottom:0;left:0;right:0;background:var(--primary);color:white;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;z-index:300;box-shadow:0 -2px 10px rgba(0,0,0,0.2);';
-      banner.innerHTML = '<span style="font-size:14px">📱 安装到手机桌面</span><div style="display:flex;gap:12px"><button onclick="dismissInstall()" style="background:none;border:none;color:white;font-size:14px;cursor:pointer">稍后</button><button onclick="doInstall()" style="background:white;color:var(--primary);border:none;padding:8px 16px;border-radius:20px;font-size:14px;font-weight:600;cursor:pointer">安装</button></div>';
-      document.body.appendChild(banner);
-    }
-    function dismissInstall() { const b = document.getElementById('install-banner'); if (b) b.remove(); }
-    async function doInstall() {
-      if (deferredPrompt) { deferredPrompt.prompt(); await deferredPrompt.userChoice; deferredPrompt = null; dismissInstall(); }
+
+    // Init
+    updateQuickStats();
+    renderWardrobe();
+    renderOutfits();
+    renderStats();
+  </script>
+
+  <script>
+    if('serviceWorker'in navigator){
+      navigator.serviceWorker.register('./sw.js').catch(function(){});
     }
   </script>
 </body>
